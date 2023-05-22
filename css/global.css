@@ -12,6 +12,10 @@
     font-family: var(--fontFamily);
 }
 
+p {
+    font-size: 16px;
+}
+
 /* FONTS */
 h1,
 h2,
