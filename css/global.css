@@ -1,10 +1,10 @@
-@import url('https://fonts.cdnfonts.com/css/tt-commons');
-                
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+            
 :root {
-    --primary: #365FD9;
+    --primary: #702dbd;
     --white: #ffffff;
     --black: #000000;
-    --fontFamily: 'TT Commons', sans-serif;
+    --fontFamily: 'Poppins', sans-serif;
     --transition: all .25s ease-in-out
 }
 
@@ -21,7 +21,7 @@ h1,
 h2,
 h3 {
     font-family: var(--fontFamily);
-    font-weight: 500;
+    font-weight: 700;
 }
 
 a,
@@ -91,7 +91,7 @@ p {
 [class*="elementor-kit"] .checkout-button,
 .woocommerce-cart-form__contents:not(.elementor-menu-cart__products) .actions .coupon [name="apply_coupon"] {
     background-color: var(--primary);
-    font-weight: 500;   
+    font-weight: 700;   
 }
 
 .elementor-section .elementor-container .elementor-element .elementor-button:hover {
