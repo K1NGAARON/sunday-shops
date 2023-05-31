@@ -68,7 +68,6 @@ const measurements = [
 const popUpBtn = document.querySelector('#popUp');
 const neededPattern = document.querySelector('#pattern'); // => pull data from custom type
 
-
 function showPopUp(e) {
     
 };
@@ -77,37 +76,31 @@ function closePopUp(e) {
 
 };
 
+document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const inputValue = parseInt(document.getElementById('chestSize').value, 10);
+    console.log('Input value:', inputValue);
+
+    // Call the calculateSize function
+    const closestSize = calculateSize(inputValue);
+    console.log('Closest size:', closestSize);
+});
+
 function calculateSize(inputValue) {
     let closestSize = '';
     let smallestDifference = Infinity;
-  
+
     for (let i = 0; i < measurements.length; i++) {
         const currentSize = measurements[i];
         const measurementA = currentSize.measurements.A;
         const difference = Math.abs(inputValue - measurementA);
-  
+
         if (difference < smallestDifference) {
             smallestDifference = difference;
             closestSize = currentSize.size;
         }
     }
-  
+
     return closestSize;
 };
-  
-// Usage example:
-// const inputValue = parseInt(document.getElementById('chestSize').value, 10);
-// const inputValue = 62;
-// const closestSize = calculateSize(inputValue);
-
-// console.log('Closest size:', closestSize);
-
-document.getElementById('myForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
-
-    // Get the input value
-    const inputValue = parseInt(document.getElementById('chestSize').value, 10);
-    
-    // Use the input value as needed
-    console.log('Input value:', inputValue);
-});
