@@ -80,11 +80,11 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
     const inputValue = parseInt(document.getElementById('chestSize').value, 10);
-    console.log('Input value:', inputValue);
 
     // Call the calculateSize function
     const closestSize = calculateSize(inputValue);
-    console.log('Closest size:', closestSize);
+
+    clearInput();
 });
 
 function calculateSize(inputValue) {
@@ -103,7 +103,11 @@ function calculateSize(inputValue) {
         }
     };
 
-
+    printResult.innerHTML = closestSize;
 
     return closestSize;
+};
+
+function clearInput() {
+    document.getElementById('chestSize').value = "";
 };

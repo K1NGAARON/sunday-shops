@@ -1,0 +1,19 @@
+.wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.section .row.flex-col {
+    flex-direction: column;
+    gap: 20px;
+}
+
+tr * {
+    padding: 5px;
+}
