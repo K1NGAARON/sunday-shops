@@ -79,12 +79,11 @@ function closePopUp(e) {
 document.getElementById('myForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const inputValue = parseInt(document.getElementById('chestSize').value, 10);
+    const inputValue = parseFloat(document.getElementById('chestSize').value.replace(',', '.'));
     const roundUpCheckbox = document.getElementById('roundUpCheckbox').checked;
 
     // Call the calculateSize function
     let closestSize = calculateSize(inputValue);
-    console.log(closestSize);
 
     if (roundUpCheckbox) {
         closestSize = roundUpSize(closestSize);
