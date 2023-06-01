@@ -17,3 +17,14 @@
 tr * {
     padding: 5px;
 }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form .form-row {
+    display: flex;
+    gap: 10px;
+}

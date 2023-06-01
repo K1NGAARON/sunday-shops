@@ -23,11 +23,18 @@
             Click here
         </a> -->
 
-        <form id="myForm">
-            <label for="chestSize">Enter a value:</label>
-            <input type="text" id="chestSize" name="inputField">
-            <input type="checkbox" name="roundUpCheckbox" id="roundUpCheckbox">
-            
+        <form id="myForm" class="form">
+            <div class="form-row">
+                <label for="chestSize">Enter a value:</label>
+                <input type="text" id="chestSize" name="inputField">
+            </div>
+            <div class="form-row">
+                <label for="roundUpCheckbox">
+                    Do you want a loosser fit?
+                </label>
+                <input type="checkbox" name="roundUpCheckbox" id="roundUpCheckbox">
+            </div>
+
             <button type="submit">Submit</button>
         </form>
 
