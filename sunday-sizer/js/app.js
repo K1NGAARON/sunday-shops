@@ -90,6 +90,7 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
 function calculateSize(inputValue) {
     let closestSize = '';
     let smallestDifference = Infinity;
+    let printResult = document.querySelector('#result');
 
     for (let i = 0; i < measurements.length; i++) {
         const currentSize = measurements[i];
@@ -100,7 +101,9 @@ function calculateSize(inputValue) {
             smallestDifference = difference;
             closestSize = currentSize.size;
         }
-    }
+    };
+
+
 
     return closestSize;
 };
