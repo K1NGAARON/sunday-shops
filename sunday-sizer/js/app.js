@@ -117,7 +117,7 @@ function roundUpSize(size) {
     const sizes = ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'];
     const index = sizes.indexOf(size);
 
-    if (index < sizes.length - 1) {
+    if (index < sizes.length - 1 && size !== '4XL') {
         return sizes[index + 1];
     }
 
