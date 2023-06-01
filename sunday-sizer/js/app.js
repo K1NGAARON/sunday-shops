@@ -80,9 +80,18 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
     const inputValue = parseInt(document.getElementById('chestSize').value, 10);
+    const roundUpCheckbox = document.getElementById('roundUpCheckbox').checked;
 
     // Call the calculateSize function
-    const closestSize = calculateSize(inputValue);
+    let closestSize = calculateSize(inputValue);
+    console.log(closestSize);
+
+    if (roundUpCheckbox) {
+        closestSize = roundUpSize(closestSize);
+    }
+
+    const printResult = document.querySelector('#result');
+    printResult.innerHTML = closestSize;
 
     clearInput();
 });
@@ -90,7 +99,6 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
 function calculateSize(inputValue) {
     let closestSize = '';
     let smallestDifference = Infinity;
-    let printResult = document.querySelector('#result');
 
     for (let i = 0; i < measurements.length; i++) {
         const currentSize = measurements[i];
@@ -101,13 +109,23 @@ function calculateSize(inputValue) {
             smallestDifference = difference;
             closestSize = currentSize.size;
         }
-    };
-
-    printResult.innerHTML = closestSize;
+    }
 
     return closestSize;
-};
+}
+
+function roundUpSize(size) {
+    const sizes = ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'];
+    const index = sizes.indexOf(size);
+
+    if (index < sizes.length - 1) {
+        return sizes[index + 1];
+    }
+
+    return size;
+}
 
 function clearInput() {
     document.getElementById('chestSize').value = "";
-};
+    document.getElementById('roundUpCheckbox').checked = false;
+}
