@@ -65,16 +65,30 @@ const measurements = [
     },
 ];
 
-const popUpBtn = document.querySelector('#popUp');
-const neededPattern = document.querySelector('#pattern'); // => pull data from custom type
+// Get the modal
+let modal = document.getElementById("myModal");
+let modalBtn = document.getElementById("popUp");
+let span = document.getElementById("closeModal");
 
-function showPopUp(e) {
-    
-};
+// When the user clicks on the button, open the modal
+$(modalBtn).click(() => {
+    modal.style.display = "block";
+})
 
-function closePopUp(e) {
+$(span).click((e) => {
+    modal.style.display = "none";
+})
 
-};
+$(window).click((e) => {
+    if (e.target == modal) {
+        modal.style.display = "none";
+      }
+})
+
+
+
+
+
 
 document.getElementById('myForm').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -127,4 +141,6 @@ function roundUpSize(size) {
 function clearInput() {
     document.getElementById('chestSize').value = "";
     document.getElementById('roundUpCheckbox').checked = false;
+
+    modal.style.display = "none";
 }
