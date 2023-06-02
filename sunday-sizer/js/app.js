@@ -82,7 +82,7 @@ $(span).click((e) => {
 $(window).click((e) => {
     if (e.target == modal) {
         modal.style.display = "none";
-      }
+    }
 })
 
 document.getElementById('myForm').addEventListener('submit', function(event) {
