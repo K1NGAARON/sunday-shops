@@ -69,7 +69,7 @@ $(document).ready(function() {
     const anchorElement = `
         <div class="sizer-holder">
             <a id="openSizer">Calculate Size</a>
-            <p>
+            <p id="sizer-holder-element">
                 Your ideal size:
                 <span id="sizeResult">
 
@@ -101,6 +101,12 @@ $(document).ready(function() {
       
         observer.observe(targetNode, config);
     }
+
+    const sizerResultElement = document.querySelector('#sizer-holder-element');
+
+    function showSizerResultDiv(e) {
+        sizerResultElement.style.display = 'block';
+    }
       
     // Usage example
     waitForElementToExist('openSizer', function(element) {
@@ -113,6 +119,7 @@ $(document).ready(function() {
     
         function hidePopUp(e) {
             modal.style.display = "none";
+            showSizerResultDiv();
         }
     
         let span = document.getElementById("closeModal");

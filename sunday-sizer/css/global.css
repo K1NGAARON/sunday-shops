@@ -392,6 +392,10 @@ tr * {
     margin-top: 20px;
 }
 
+.sizer-holder #sizer-holder-element {
+    display: none;
+}
+
 .sizer-holder p {
     color: var(--primary);
     font-weight: 20px;
