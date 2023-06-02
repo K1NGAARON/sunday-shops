@@ -89,3 +89,11 @@ tr * {
     margin: 0;
     width: 100%;
 }
+
+.video-wrapper {
+    width: 100%;
+}
+
+.modal .form {
+    margin-top: 40px;
+}
