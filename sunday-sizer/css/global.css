@@ -97,3 +97,21 @@ tr * {
 .modal .form {
     margin-top: 40px;
 }
+
+@media (max-width: 560px) {
+    .modal-content {
+        width: 100%;
+    }
+
+    .modal {
+        padding: 0 30px;
+    }
+
+    .modal h5 {
+        font-size: 22px;
+    }
+
+    .result-wrapper {
+        justify-content: center;
+    }
+}
