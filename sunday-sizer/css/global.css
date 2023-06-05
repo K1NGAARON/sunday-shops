@@ -9,11 +9,6 @@
     font-family: var(--fontFamily);
 }
 
-p {
-    font-size: 16px;
-}
-
-/* FONTS */
 h1,
 h2,
 h3 {
@@ -25,6 +20,10 @@ a,
 li,
 p {
     font-family: var(--fontFamily);
+}
+
+p {
+    font-size: 16px;
 }
 
 /* HEADER */
@@ -51,7 +50,6 @@ p {
 .primary-navigation li.current-menu-item > a,
 .primary-navigation > li.current-menu-parent > a {
     color: var(--primary);
-    /* font-weight: 700; */
 }
 
 .site-tools .tools-icon:hover .woostify-svg-icon,
@@ -238,7 +236,7 @@ p {
 }
  
 .woocommerce-form-coupon-toggle {
-    background-color: #3F84C5;
+    background-color: var(--primary);
     padding: 10px 20px;
     color: var(--white);
     border-radius: 9px;
