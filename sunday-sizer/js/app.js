@@ -135,7 +135,9 @@ $(document).ready(function() {
             const inputValue = parseFloat(document.getElementById('chestSize').value.replace(',', '.'));
             const roundUpCheckbox = document.getElementById('roundUpCheckbox').checked;
         
-            const closestSize = calculateSize(inputValue, roundUpCheckbox);
+            const closestSize = calculateSize(inputValue);
+
+            console.log(closestSize)
         
             const printResult = document.querySelector('#sizeResult');
             printResult.innerHTML = closestSize;
@@ -175,8 +177,7 @@ $(document).ready(function() {
             }
         
             if (closestSize !== '4XL') {
-                const nextSize = measurements[measurements.findIndex(size => size.size === closestSize) + 1].size;
-                return nextSize;
+                return closestSize;
             }
         
             return closestSize;
