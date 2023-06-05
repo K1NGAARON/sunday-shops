@@ -155,7 +155,7 @@ $(document).ready(function() {
             const largestSizeCutoffPoint = largestSizeMeasurement + cutoff;
         
             if (inputValue <= xsCutoffPoint || inputValue >= largestSizeCutoffPoint) {
-                return 'Error: Your size is outside our measurement chart.';
+                return 'Your size is outside our measurement chart.';
             }
         
             let closestSize = '';
@@ -173,7 +173,7 @@ $(document).ready(function() {
             }
         
             if (roundUpCheckbox && closestSize === 'XS' && inputValue <= xsCutoffPoint) {
-                return 'Error: Input value is below the cutoff point.';
+                return 'Your size is outside our measurement chart.';
             }
         
             if (closestSize !== '4XL') {
