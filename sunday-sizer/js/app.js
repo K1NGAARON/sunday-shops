@@ -71,12 +71,11 @@ $(document).ready(function() {
             <a id="openSizer">Calculate Size</a>
             <p id="sizer-holder-element">
                 Your ideal size:
-                <span id="sizeResult">
-
-                </span>
+                <br>
+                <span id="sizeResult"></span>
             </p>
         </div>
-    `
+    `;
 
     const variationsElement = document.querySelector('.woocommerce-product-details__short-description');
     if (variationsElement) {
@@ -90,7 +89,7 @@ $(document).ready(function() {
         const observer = new MutationObserver(function(mutationsList, observer) {
             for (let mutation of mutationsList) {
                 if (mutation.type === 'childList') {
-                const element = document.getElementById(elementId);
+                    const element = document.getElementById(elementId);
                     if (element) {
                         observer.disconnect();
                         callback(element);
@@ -132,25 +131,31 @@ $(document).ready(function() {
         
         document.getElementById('myForm').addEventListener('submit', function(event) {
             event.preventDefault();
-        
+
             const inputValue = parseFloat(document.getElementById('chestSize').value.replace(',', '.'));
             const roundUpCheckbox = document.getElementById('roundUpCheckbox').checked;
         
-            // Call the calculateSize function
-            let closestSize = calculateSize(inputValue);
-        
-            if (roundUpCheckbox) {
-                closestSize = roundUpSize(closestSize);
-            }
+            const closestSize = calculateSize(inputValue, roundUpCheckbox);
         
             const printResult = document.querySelector('#sizeResult');
             printResult.innerHTML = closestSize;
-            console.log(closestSize);
         
             clearInput();
         });
         
-        function calculateSize(inputValue) {
+        function calculateSize(inputValue, roundUpCheckbox) {
+            const cutoff = 5;
+
+            const xsSizeMeasurement = measurements.find(size => size.size === 'XS').measurements.A;
+            const largestSizeMeasurement = measurements.find(size => size.size === '4XL').measurements.A;
+        
+            const xsCutoffPoint = xsSizeMeasurement - cutoff;
+            const largestSizeCutoffPoint = largestSizeMeasurement + cutoff;
+        
+            if (inputValue <= xsCutoffPoint || inputValue >= largestSizeCutoffPoint) {
+                return 'Error: Your size is outside our measurement chart.';
+            }
+        
             let closestSize = '';
             let smallestDifference = Infinity;
         
@@ -165,19 +170,17 @@ $(document).ready(function() {
                 }
             }
         
-            return closestSize;
-        }
-        
-        function roundUpSize(size) {
-            const sizes = ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'];
-            const index = sizes.indexOf(size);
-        
-            if (index < sizes.length - 1 && size !== '4XL') {
-                return sizes[index + 1];
+            if (roundUpCheckbox && closestSize === 'XS' && inputValue <= xsCutoffPoint) {
+                return 'Error: Input value is below the cutoff point.';
             }
         
-            return size;
-        }
+            if (closestSize !== '4XL') {
+                const nextSize = measurements[measurements.findIndex(size => size.size === closestSize) + 1].size;
+                return nextSize;
+            }
+        
+            return closestSize;
+        }     
         
         function clearInput() {
             document.getElementById('chestSize').value = "";
