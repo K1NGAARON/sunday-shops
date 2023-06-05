@@ -394,6 +394,11 @@ tr * {
 
 .sizer-holder #sizer-holder-element {
     display: none;
+	color: var(--black);
+}
+
+.sizer-holder #sizeResult {
+	color: var(--primary);
 }
 
 .sizer-holder p {
