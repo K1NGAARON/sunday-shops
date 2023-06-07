@@ -591,6 +591,10 @@ p {
     width: 100%;
     max-width: none;
 }
+	
+.woocommerce-additional-fields {
+    display: none;
+}
 
 .woocommerce-Address .woocommerce-Address-title h3 {
     text-transform: uppercase;
