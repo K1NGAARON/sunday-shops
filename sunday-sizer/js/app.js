@@ -137,7 +137,7 @@ $(document).ready(function() {
         
             const closestSize = calculateSize(inputValue, roundUpCheckbox);
 
-            console.log(closestSize)
+            console.log(closestSize);
         
             const printResult = document.querySelector('#sizeResult');
             printResult.innerHTML = closestSize;
@@ -155,10 +155,10 @@ $(document).ready(function() {
             const largestSizeCutoffPoint = largestSizeMeasurement + cutoff;
         
             if (inputValue <= xsCutoffPoint || inputValue >= largestSizeCutoffPoint) {
-                return 'Your size is outside our measurement chart.';
+                return "Your size is outside our measurement chart. Please select the 'other size' below.";
             }
         
-            let closestSize = '';
+            // let closestSize = '';
             let smallestDifference = Infinity;
         
             for (let i = 0; i < measurements.length; i++) {
@@ -170,19 +170,17 @@ $(document).ready(function() {
                     smallestDifference = difference;
                     closestSize = currentSize.size;
                 }
-            }
-
-
+            };
 
             if (roundUpCheckbox && closestSize === 'XS' && inputValue < xsCutoffPoint) {
                 return 'Your size is outside our measurement chart.';
-            }
+            };
             
             if (roundUpCheckbox && closestSize !== '4XL') {
                 const currentIndex = measurements.findIndex(size => size.size === closestSize);
                 const nextSize = measurements[currentIndex + 1];
                 return nextSize ? nextSize.size : closestSize;
-            }
+            };
             
             return closestSize;
         }     
