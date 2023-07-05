@@ -85,7 +85,6 @@ function accountBalance(e) {
 
 function replaceErrorText(e) {
     const errorMSG = document.querySelector('.woocommerce-notice.woocommerce-notice--info.woocommerce-info');
-	const errorPop = document.querySelector('.woocommerce-error li');
 	
     if (errorMSG) {
         errorMSG.innerText = "You can only order 3 items. Adjust your cart to be able to check out.";
