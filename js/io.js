@@ -29,7 +29,7 @@ function replaceErrorText(e) {
     const errorMSG = document.querySelector('#payment .woocommerce-info');
 
     if (errorMSG) {
-        errorMSG.innerText = "Don’t forget to add your Coupon Code to be able to order your iO goodies!";
+        errorMSG.innerText = "Don't forget to add your Coupon Code to be able to order your iO goodies!";
         
     } else {
         // Nothing

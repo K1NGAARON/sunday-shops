@@ -23,9 +23,9 @@ p {
 	gap: 5px;
 }
 
-.woocommerce-result-count {
+/* .woocommerce-result-count {
 	display: none;
-}
+} */
 
 .product-summary .price {
 	justify-content: flex-start;
