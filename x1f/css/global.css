@@ -9,21 +9,20 @@
     --transition: all .25s ease-in-out
 }
 
-#tab-title-additional_information {
+/* #tab-title-additional_information {
     display: none;
-}
+} */
 
 .product-nav-item-inner .product-nav-item-price {
 	display: none;
 }
-
 
 .animated-meta .price {
 	visibility: hidden;
 }
 
 .woocommerce-checkout-review-order-table .cart-subtotal,
-.woocommerce-checkout-review-order-table .order-total{
+.woocommerce-checkout-review-order-table .order-total {
 	display: none;
 }
 
@@ -76,9 +75,9 @@ table .product-subtotal {
     display: none!important;
 }
 
-.woocommerce-tabs.wc-tabs-wrapper {
+/* .woocommerce-tabs.wc-tabs-wrapper {
     display: none;
-}
+} */
                                                 
 * {
     font-family: var(--fontFamily);
