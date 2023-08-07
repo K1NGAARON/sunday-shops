@@ -1728,7 +1728,9 @@ $(document).ready(function() {
     // Add sizer pop up button
     const variationsElement = document.querySelector('.woocommerce-product-details__short-description');
     if (variationsElement) {
-        const anchorElement = `
+        // Check if measurement chart is known
+        if (sizeChart) {
+            const anchorElement = `
             <div class="sizer-holder">
                 <a id="openSizer">Calculate Size</a>
                 <p id="sizer-holder-element">
@@ -1737,8 +1739,9 @@ $(document).ready(function() {
                     <span id="sizeResult"></span>
                 </p>
             </div>
-        `;
-        variationsElement.insertAdjacentHTML('beforeend', anchorElement);
+            `;
+            variationsElement.insertAdjacentHTML('beforeend', anchorElement);
+        }
     }
 
     function waitForElementToExist(elementId, callback) {
