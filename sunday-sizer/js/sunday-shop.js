@@ -3,9 +3,7 @@ $(document).ready(function() {
         2173: "bax_tshirt_chart", // White spray paint t-shirt
         2280: "olivier_tshirt_chart", // Sunday t-shirt black
         2278: "olivier_tshirt_chart", // Sunday t-shirt white
-
         2269: "sweatshorts_chart", // Sunday SS22 sweatshort
-        2201: "bax_tshirt_chart", // White SS22 t-shirt
 
         2239: "jan_sports_chart", // Recycled sports t-shirt
         2265: "jan_sports_chart", // Sunday sports polo
@@ -31,6 +29,8 @@ $(document).ready(function() {
 
         2213: "aero_pro_chart", // Aero pro jersey unisex grey
         2210: "aero_pro_chart", // Aero pro jersey unisex black
+
+        2201: "bax_tshirt_chart", // White SS22 t-shirt
     };
     
     const sizeCharts = {
@@ -1585,6 +1585,32 @@ $(document).ready(function() {
         },
     
         // SPORTSWEAR
+        "olivier_sports_chart": {
+            "XS": {
+                A: 51,
+            },
+            "S": {
+                A: 53,
+            },
+            "M": {
+                A: 55,
+            },
+            "L": {
+                A: 57,
+            },
+            "XL": {
+                A: 59,
+            },
+            "2XL": {
+                A: 61,
+            },
+            "3XL": {
+                A: 63,
+            },
+            "4XL" : {
+                A: 65,
+            }
+        },
         "sports_shorts_chart": {
             "XS": {
                 A: 30,
@@ -1667,9 +1693,11 @@ $(document).ready(function() {
 
     // Retrieve product ID
     function getMeasurementChart(productID) {
+        // Check if the product ID exists in the productsSizeCharts object
         if (productsSIzeCharts.hasOwnProperty(productID)) {
             return productsSIzeCharts[productID];
         } else {
+            // If the product ID is not found in the object, return null or any other default value
             return null;
         }
     }
