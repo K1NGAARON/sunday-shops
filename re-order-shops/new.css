@@ -50,12 +50,16 @@ a:hover,
 }
 
 .product-loop-meta {
-    /* display: none; */
-    overflow: unset;
+    /* display: none;
+    overflow: unset; */
+}
+
+.loop-add-to-cart-btn:hover {
+    cursor: pointer;
 }
 
 .site-content .animated-meta .price {
-    /* display: none; */
+    display: none;
 }
 
 .products .product:hover .product-loop-meta:not(.no-transform) .animated-meta {
@@ -98,7 +102,7 @@ table .product-subtotal,
 
 .animated-meta .price,
 .product-summary .price {
-	display: none;
+	/* display: none; */
 	gap: 5px;
 }
 

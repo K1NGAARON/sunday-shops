@@ -19,31 +19,31 @@
                 address2 = '14 East, Level 7';
                 city = 'Gzira';
                 zip = 'GZR1639';
-                country = 'MLA';
+                country = 'MT';
                 phone = '';
                 break;
             case 'Madrid - Socios.com':
-                address1 = '';
-                address2 = ' ';
-                city = '';
-                zip = '';
-                country = '';
+                address1 = 'Calle Leganitos 47';
+                address2 = '8 A';
+                city = 'Madrid';
+                zip = '28013';
+                country = 'ES';
                 phone = '';
                 break;
             case 'Istanbul - Socios Türkiye':
                 address1 = '';
-                address2 = ' ';
+                address2 = '';
                 city = '';
                 zip = '';
-                country = '';
+                country = 'TR';
                 phone = '';
                 break;
             case 'Lyon - Socios Services France':
-                address1 = '';
+                address1 = 'Cours Lafayette 222';
                 address2 = ' ';
-                city = '';
-                zip = '';
-                country = '';
+                city = 'Lyon';
+                zip = '69003';
+                country = 'FR';
                 phone = '';
                 break;
             case 'London - Socios.com':
@@ -51,15 +51,15 @@
                 address2 = 'Office 404';
                 city = 'London';
                 zip = 'W1W 8TF';
-                country = 'UK';
+                country = 'GB';
                 phone = '';
                 break;
             case 'Switzerland - Socios Technologies AG':
                 address1 = 'Gubelstrasse 11';
-                address2 = ' ';
+                address2 = '';
                 city = 'Zug';
                 zip = '6300';
-                country = '';
+                country = 'CH';
                 phone = '';
                 break;
         }
