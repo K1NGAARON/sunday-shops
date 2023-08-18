@@ -50,12 +50,12 @@ a:hover,
 }
 
 .product-loop-meta {
-    display: none;
+    /* display: none; */
     overflow: unset;
 }
 
 .site-content .animated-meta .price {
-    display: none;
+    /* display: none; */
 }
 
 .products .product:hover .product-loop-meta:not(.no-transform) .animated-meta {
