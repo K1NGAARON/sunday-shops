@@ -50,6 +50,7 @@ a:hover,
 }
 
 .product-loop-meta {
+    display: none;
     overflow: unset;
 }
 
@@ -61,7 +62,9 @@ a:hover,
     transform: unset;
 }
 
-
+.shop_table.woocommerce-checkout-review-order-table th:nth-child(2) {
+    display: none;
+}
 
 .woocommerce-checkout-review-order-table .cart-subtotal,
 .woocommerce-checkout-review-order-table .order-total,
