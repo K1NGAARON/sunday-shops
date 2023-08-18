@@ -10,11 +10,18 @@ $(document).ready(function() {
         $(checkoutBtn).text('Request Quote');
     }
 
+    function changeSideBarBtnText() {
+        const checkoutBtn = document.querySelector('.woocommerce-mini-cart__buttons.buttons .button.checkout');
+        $(checkoutBtn).text('Request Quote');
+    }
+
 	if (quantityField) {
 		changeMinValue();
 	}
 
     setTimeout(function() {
+        changeSideBarBtnText();
+
         if (window.location.href.includes("/checkout/")) {
             changeCheckoutBtn();
         };
