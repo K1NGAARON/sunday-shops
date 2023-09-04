@@ -49,11 +49,6 @@ a:hover,
 	visibility: hidden;
 }
 
-.product-loop-meta {
-    /* display: none;
-    overflow: unset; */
-}
-
 .loop-add-to-cart-btn:hover {
     cursor: pointer;
 }
@@ -95,14 +90,8 @@ table .product-subtotal,
 	display: none;
 }
 
-#tab-title-additional_information,
-.woocommerce-additional-fields {
-    /* display: none; */
-}
-
 .animated-meta .price,
 .product-summary .price {
-	/* display: none; */
 	gap: 5px;
 }
 
