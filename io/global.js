@@ -30,9 +30,8 @@ function replaceErrorText(e) {
 
     if (errorMSG) {
         errorMSG.innerText = "Don’t forget to add your Coupon Code to be able to order your iO goodies!";
+        errorMSG.classList.add('active');
     }
-
-    errorMSG.classList.add('active');
 }
 
 function hideOneSizeTable() {
@@ -58,19 +57,12 @@ function checkAndHideOneSizeTable() {
     }
 };
 
-// function hideCartItems() {
-//     let cartItems = document.getElementsByClassName('cart_item');
-//     let startIndex = Math.max(cartItems.length - 2, 0);
-
-//     for (let i = startIndex; i < cartItems.length; i++) {
-//         cartItems[i].style.display = 'none';
-//     }
-// };
-
 function hideCartItems() {
     let cartItems = document.getElementsByClassName('cart_item');
-    
-    if (cartItems.length > 3) {
+    console.log(cartItems);
+
+    if (cartItems.length >= 2) {
+        console.log('yes')
         for (let i = cartItems.length - 2; i < cartItems.length; i++) {
             cartItems[i].style.display = 'none';
         }
@@ -144,6 +136,7 @@ $(document).ready(function() {
 	
     setTimeout(function() {
 		hideCartItems();
+        hideCheckoutCount();
         replaceErrorText();
     }, 1000);
 });
