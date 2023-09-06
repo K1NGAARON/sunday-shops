@@ -1,7 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/poppins');             
                 
 :root {
-    --primary: #bedce1;
+    --primary: #ffff00;
     --white: #ffffff;
     --black: #000000;
     --fontFamily: 'Poppins', sans-serif;
@@ -124,7 +124,7 @@ table .product-subtotal,
 .primary-navigation li > a,
 .primary-navigation li.current-menu-item > a,
 .primary-navigation > li.current-menu-parent > a {
-    color: var(--primary);
+    color: var(--black);
     font-weight: 700;
 }
 
@@ -132,12 +132,12 @@ table .product-subtotal,
 .site-tools .tools-icon .woostify-svg-icon,
 .woocommerce-mini-cart__total .amount,
 .primary-navigation a:hover {
-    color: var(--primary);
+    color: var(--black);
 }
 
 .shop-cart-count {
     background-color: var(--primary);
-    color: var(--white);
+    color: var(--black);
 }
 
 .cart-sidebar-head .shop-cart-count,
@@ -161,6 +161,7 @@ table .product-subtotal,
 .product-loop-meta.no-transform .added_to_cart, 
 [class*="elementor-kit"] .checkout-button,
 .woocommerce-cart-form__contents:not(.elementor-menu-cart__products) .actions .coupon [name="apply_coupon"] {
+    color: var(--black);
     background-color: var(--primary);
     font-weight: 500;   
 }
