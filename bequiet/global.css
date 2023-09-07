@@ -1,7 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/poppins');             
                 
 :root {
-    --primary: #ffff00;
+    --primary: #FC6423;
     --white: #ffffff;
     --black: #000000;
     --fontFamily: 'Poppins', sans-serif;
@@ -37,6 +37,7 @@ li::marker {
 
 a:hover,
 .product-loop-meta .button:hover {
+    cursor: pointer!important;
 	color: var(--primary);
 }
 
@@ -136,8 +137,8 @@ table .product-subtotal,
 }
 
 .shop-cart-count {
+    color: var(--white);
     background-color: var(--primary);
-    color: var(--black);
 }
 
 .cart-sidebar-head .shop-cart-count,
@@ -161,13 +162,18 @@ table .product-subtotal,
 .product-loop-meta.no-transform .added_to_cart, 
 [class*="elementor-kit"] .checkout-button,
 .woocommerce-cart-form__contents:not(.elementor-menu-cart__products) .actions .coupon [name="apply_coupon"] {
-    color: var(--black);
+    color: var(--white);
     background-color: var(--primary);
     font-weight: 500;   
 }
 
 .elementor-section .elementor-container .elementor-element .elementor-button:hover {
     background-color: var(--primary);
+    cursor: pointer;
+}
+
+.elementor-button *:hover {
+    cursor: pointer;
 }
 
 .shop_table .woocommerce-Price-amount {
