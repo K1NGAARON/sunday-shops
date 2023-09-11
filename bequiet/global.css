@@ -1,7 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/poppins');             
                 
 :root {
-    --primary: #C42828;
+    --primary: #001a2a;
     --white: #ffffff;
     --black: #000000;
     --fontFamily: 'Poppins', sans-serif;
@@ -104,7 +104,7 @@ table .product-subtotal,
 }
 
 #masthead {
-    background-color: var(--white);
+    background-color: var(--primary);
     padding: 10px 0;
 }
 
@@ -125,7 +125,7 @@ table .product-subtotal,
 .primary-navigation li > a,
 .primary-navigation li.current-menu-item > a,
 .primary-navigation > li.current-menu-parent > a {
-    color: var(--black);
+    color: var(--white);
     font-weight: 700;
 }
 
@@ -133,17 +133,17 @@ table .product-subtotal,
 .site-tools .tools-icon .woostify-svg-icon,
 .woocommerce-mini-cart__total .amount,
 .primary-navigation a:hover {
-    color: var(--black);
+    color: var(--white);
 }
 
 .shop-cart-count {
-    color: var(--white);
-    background-color: var(--primary);
+    color: var(--primary);
+    background-color: var(--white);
 }
 
 .cart-sidebar-head .shop-cart-count,
 .shop-cart-count {
-    background-color: var(--primary);
+    background-color: var(--white);
 }
 
 /* BUTTONS */
