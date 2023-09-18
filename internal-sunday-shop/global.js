@@ -51,6 +51,8 @@ function addPriceIcon(e) {
     } else {
         // Loop through each parent div
         priceTargets.forEach(priceTarget => {
+            $('.woocommerce-Price-currencySymbol').remove();
+
             const spanElement = document.createElement('span');
             spanElement.className = 'woocommerce-Price-amount amount';
 
