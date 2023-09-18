@@ -32,34 +32,29 @@ function accountBalance(e) {
 
 function replaceErrorText(e) {
     const errorMSG = document.querySelector('.woocommerce-notice.woocommerce-notice--info.woocommerce-info');
-	const errorPop = document.querySelector('.woocommerce-error li');
 	
     if (errorMSG) {
         errorMSG.innerText = "You can only order 3 items. Adjust your cart to be able to check out.";
         
     } else {
-        // Nothing
     }
 
     errorMSG.classList.add('active');
 };
 
 function addPriceIcon(e) {
-    // Get all parent divs with class "price"
     const priceTargets = document.querySelectorAll('.price');
 
     if (!priceTargets) {
         return;
     } else {
-        // Loop through each parent div
         priceTargets.forEach(priceTarget => {
             $('.woocommerce-Price-currencySymbol').remove();
 
             const spanElement = document.createElement('span');
-            spanElement.className = 'woocommerce-Price-amount amount';
-
             const textNode = document.createTextNode('Sundaze Coins');
 
+            spanElement.className = 'woocommerce-Price-amount amount';
             spanElement.appendChild(textNode);
 
             priceTarget.appendChild(spanElement);
@@ -71,7 +66,3 @@ $(document).ready(function() {
 	accountBalance();
 	addPriceIcon();
 });
-
-// setTimeout(function() {
-//     replaceErrorText();
-// }, 1000);
