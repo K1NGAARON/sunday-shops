@@ -1,21 +1,23 @@
-function closeAccordion(e) {
+function closeAccordion() {
     $('.accordion-head').removeClass('active');
     $('.accordion-body').removeClass('active');
-    $('.accordion-head').children('.icon').removeClass('active');
-    $('.accordion-head').children('.icon').children('i').removeClass('fa-minus');
-    $('.accordion-head').children('.icon').children('i').addClass('fa-plus');
-};
+    $('.accordion-head .icon').removeClass('active');
+    $('.accordion-head .icon i').removeClass('fa-minus').addClass('fa-plus');
+}
 
-$('.accordion-item').click(function () {
+function handleAccordionClick() {
     closeAccordion();
 
-    $(this).children('.accordion-head').toggleClass('active');
-    $(this).children('.accordion-head').siblings('.accordion-body').toggleClass('active');
-    $(this).children('.accordion-head').children('.icon').toggleClass('active');
+    let accordionItem = $(this);
+    
+    accordionItem.children('.accordion-head').toggleClass('active');
+    accordionItem.children('.accordion-head').siblings('.accordion-body').toggleClass('active');
+    accordionItem.children('.accordion-head .icon').toggleClass('active');
+    accordionItem.children('.accordion-head .icon i').removeClass('fa-plus').addClass('fa-minus');
+}
 
-    $(this).children('.accordion-head').children('.icon').children('i').removeClass('fa-plus');
-    $(this).children('.accordion-head').children('.icon').children('i').addClass('fa-minus');
-});
+$('.accordion-item').click(handleAccordionClick);
+
 
 function accountBalance(e) {
     const balanceTarget = $('.mycred-my-balance-wrapper div');
