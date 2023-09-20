@@ -87,7 +87,7 @@ li::marker {
 
 .animated-meta .price,
 .product-summary .price {
-	display: flex;
+	display: none;
 	justify-content: flex-start;
 	gap: 5px;
 }
