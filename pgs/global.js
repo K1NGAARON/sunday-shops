@@ -17,6 +17,7 @@ $('.accordion-item').click(function () {
     $(this).children('.accordion-head').children('.icon').children('i').addClass('fa-minus');
 });
 
+
 function addPriceIcon(e) {
     const priceTargets = document.querySelectorAll('.price');
 
@@ -87,7 +88,9 @@ $(document).ready(function() {
             'https://pgs.shop.teamsunday.com/product/softshell/',
             'https://pgs.shop.teamsunday.com/product/business-shirt/',
             'https://pgs.shop.teamsunday.com/product/muts/',
-            'https://pgs.shop.teamsunday.com/product/sjaal/'
+            'https://pgs.shop.teamsunday.com/product/sjaal/',
+            'https://pgs.shop.teamsunday.com/product/weekendtas/',
+            'https://pgs.shop.teamsunday.com/product/backpack/'
         ];
 
         const currentURL = window.location.href;

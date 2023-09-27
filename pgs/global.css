@@ -601,3 +601,11 @@ p {
 #tab-title-additional_information {
     display: none;
 }
+
+.woocommerce-checkout-review-order .shop_table.woocommerce-checkout-review-order-table {
+    display: table!important;
+}
+
+.woocommerce-checkout-review-order .shop_table.woocommerce-checkout-review-order-table .cart_item .product-total {
+    display: unset!important;
+}
