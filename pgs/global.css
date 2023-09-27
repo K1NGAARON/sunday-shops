@@ -443,6 +443,10 @@ p {
   }
 }
 
+.variations {
+    display: flex!important;
+}
+
 /* POP UP CSS */
 .modal {
     display: none;

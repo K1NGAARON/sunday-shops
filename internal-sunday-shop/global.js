@@ -1,23 +1,21 @@
-function closeAccordion() {
+function closeAccordion(e) {
     $('.accordion-head').removeClass('active');
     $('.accordion-body').removeClass('active');
-    $('.accordion-head .icon').removeClass('active');
-    $('.accordion-head .icon i').removeClass('fa-minus').addClass('fa-plus');
-}
+    $('.accordion-head').children('.icon').removeClass('active');
+    $('.accordion-head').children('.icon').children('i').removeClass('fa-minus');
+    $('.accordion-head').children('.icon').children('i').addClass('fa-plus');
+};
 
-function handleAccordionClick() {
+$('.accordion-item').click(function () {
     closeAccordion();
 
-    let accordionItem = $(this);
-    
-    accordionItem.children('.accordion-head').toggleClass('active');
-    accordionItem.children('.accordion-head').siblings('.accordion-body').toggleClass('active');
-    accordionItem.children('.accordion-head .icon').toggleClass('active');
-    accordionItem.children('.accordion-head .icon i').removeClass('fa-plus').addClass('fa-minus');
-}
+    $(this).children('.accordion-head').toggleClass('active');
+    $(this).children('.accordion-head').siblings('.accordion-body').toggleClass('active');
+    $(this).children('.accordion-head').children('.icon').toggleClass('active');
 
-$('.accordion-item').click(handleAccordionClick);
-
+    $(this).children('.accordion-head').children('.icon').children('i').removeClass('fa-plus');
+    $(this).children('.accordion-head').children('.icon').children('i').addClass('fa-minus');
+});
 
 function accountBalance(e) {
     const balanceTarget = $('.mycred-my-balance-wrapper div');
@@ -37,6 +35,7 @@ function replaceErrorText(e) {
         errorMSG.innerText = "You can only order 3 items. Adjust your cart to be able to check out.";
         
     } else {
+        return;
     }
 
     errorMSG.classList.add('active');
@@ -52,9 +51,10 @@ function addPriceIcon(e) {
             $('.woocommerce-Price-currencySymbol').remove();
 
             const spanElement = document.createElement('span');
+            spanElement.className = 'woocommerce-Price-amount amount';
+
             const textNode = document.createTextNode('Sundaze Coins');
 
-            spanElement.className = 'woocommerce-Price-amount amount';
             spanElement.appendChild(textNode);
 
             priceTarget.appendChild(spanElement);

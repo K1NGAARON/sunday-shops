@@ -17,6 +17,10 @@ h3 {
     font-weight: 700;
 }
 
+.primary-navigation .menu-item-has-children:hover > a {
+	color: var(--primary);	
+}
+
 a,
 li,
 p {
@@ -521,6 +525,18 @@ tr * {
   color: var(--black);
   text-align: left;
   opacity: 0.5;
+}
+
+.mycred-my-balance-wrapper div {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.mycred-my-balance-wrapper div p {
+    font-size: 16px;
 }
 
 @media (max-width: 560px) {
