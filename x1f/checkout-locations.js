@@ -348,7 +348,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const addressField2 = document.getElementById('billing_address_2');
                 const cityField = document.getElementById('billing_city');
                 const zipCodeField = document.getElementById('billing_postcode');
-                const phoneField = document.getElementById('billing_phone');
+                // const phoneField = document.getElementById('billing_phone');
 
                 if (addressField1) {
                     addressField1.value = selectedAddressData.address1;
@@ -366,9 +366,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     zipCodeField.value = selectedAddressData.zip;
                 }
 
-                if (phoneField) {
-                    phoneField.value = selectedAddressData.phone;
-                }
+                // if (phoneField) {
+                //     phoneField.value = selectedAddressData.phone;
+                // }
 
                 if (countrySelectElement) {
                     const options = countrySelectElement.getElementsByTagName('option');
