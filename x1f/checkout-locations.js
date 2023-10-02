@@ -8,26 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const addresses = [
                 {
-                    option: 'iO - Campus Amsterdam',
-                    address1: 'Spaklerweg 52',
-                    address2: 'iO Campus',
-                    city: 'Amsterdam',
-                    zip: '1114 AE',
-                    country: 'NL',
-                    phone: '+31 20 3057205',
-                },
-                {
-                    option: 'iO - Campus Antwerpen',
-                    address1: 'Mechelsesteenweg 271 bus 1.1',
-                    address2: 'iO Campus',
-                    city: 'Antwerpen',
-                    zip: '2018',
-                    country: 'BE',
-                    phone: '+32 3 361 68 01',
-                },
-                // Add more addresses here
-                {
-                    option: 'ADWEKO Headquarter Walldorf',
+                    label: 'Adweko Headquarter Walldorf',
+                    option: 'adweko-headquarter-walldorf',
                     address1: 'Altrottstraße 31',
                     address2: '',
                     city: 'Walldorf/Baden',
@@ -36,7 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'ADWEKO Stuttgart',
+                    label: 'Adweko Stuttgart',
+                    option: 'adweko-stuttgart',
                     address1: 'Maybachstraße 20',
                     address2: '',
                     city: 'Stuttgart',
@@ -45,7 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'ADWEKO Frankfurt',
+                    label: 'Adweko Frankfurt',
+                    option: 'adweko-frankfurt',
                     address1: 'Mainzer Landstraße 180',
                     address2: '',
                     city: 'Frankfurt',
@@ -54,7 +38,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'ADWEKO Berlin',
+                    label: 'Adweko Berlin',
+                    option: 'adweko-berlin',
                     address1: 'Stresemannstraße 123c',
                     address2: '',
                     city: 'Berlin',
@@ -63,7 +48,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'ADWEKO Hamburg',
+                    label: 'Adweko Hamburg',
+                    option: 'adweko-hamburg',
                     address1: 'Willy-Brandt-Straße 23',
                     address2: '',
                     city: 'Hamburg',
@@ -72,7 +58,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'ADWEKO Hannover',
+                    label: 'Adweko Hannover',
+                    option: 'adweko-hannover',
                     address1: 'Bödekerstraße 1',
                     address2: '',
                     city: 'Hannover',
@@ -81,7 +68,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'ADWEKO Hungary Kft.',
+                    label: 'Adweko Hungary Kft',
+                    option: 'adweko-hungary-kft',
                     address1: '1036 Budapest, Lajos u. 66, 3. emelet',
                     address2: '',
                     city: 'Budapest',
@@ -90,7 +78,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'ADWEKO Global Ltd.',
+                    label: 'Adweko Global Ltd',
+                    option: 'adweko-global-ltd',
                     address1: '13 Princeton Court, 53 to 55 Felsham Road',
                     address2: '',
                     city: 'London',
@@ -99,7 +88,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'ADWEKO America Inc.',
+                    label: 'Adweko America Inc',
+                    option: 'adweko-america-inc',
                     address1: '801 Brickell Avenue / 8th Floor',
                     address2: '',
                     city: 'Miami',
@@ -108,7 +98,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'ADWEKO Canada Inc.',
+                    label: 'Adweko Canada Inc',
+                    option: 'adweko-canada-inc',
                     address1: 'First Canadian Pace, 100 King Street West, Suite 5600',
                     address2: '',
                     city: 'Toronto',
@@ -117,7 +108,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'ADWEKO Athens',
+                    label: 'Adweko Athens',
+                    label: 'adweko-athens',
+                    option: 'adweko-athens',
                     address1: 'Solonos 53 and Sina (room 319)',
                     address2: '',
                     city: 'Athens',
@@ -126,16 +119,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'ADWEKO Athens',
-                    address1: 'Solonos 53 and Sina (room 319)',
-                    address2: '',
-                    city: 'Athens',
-                    zip: '106 72',
-                    country: 'GR',
-                    phone: '',
-                },
-                {
-                    option: 'BasisTeam IT Service & Consulting GmbH',
+                    label: 'BasisTeam IT Service & Consulting GmbH',
+                    label: 'basisteam-it-service-consulting',
+                    option: 'basisteam-it',
                     address1: 'Grabenstraße 12',
                     address2: '',
                     city: 'Bochum',
@@ -144,7 +130,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'COMPIRICUS GmbH',
+                    label: 'COMPIRICUS GmbH',
+                    option: 'compiricus-gmbh',
                     address1: 'Graf-Adolf-Platz 6',
                     address2: '',
                     city: 'Düsseldorf',
@@ -153,7 +140,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'COMPIRICUS, Inc.',
+                    label: 'COMPIRICUS, Inc',
+                    option: 'compiricus-inc',
                     address1: '75 State Street, Suite 100',
                     address2: '',
                     city: 'Boston',
@@ -162,7 +150,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'e2 Security GmbH',
+                    label: 'e2 Security GmbH',
+                    option: 'e-2-security-gmbh',
                     address1: 'Rabinstraße 1',
                     address2: '',
                     city: 'Bonn',
@@ -171,7 +160,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'fink.',
+                    label: 'fink',
+                    option: 'fink',
                     address1: 'Nymphenburger Str. 1',
                     address2: '',
                     city: 'München',
@@ -180,7 +170,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'FSP GmbH Consulting & IT-Services',
+                    label: 'FSP GmbH Consulting & IT-Services',
+                    option: 'fsp-gmbh-consulting',
                     address1: 'Albin-Köbis-Straße 8',
                     address2: '',
                     city: 'Köln',
@@ -189,7 +180,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'IKOR GmbH Hamburg',
+                    label: 'IKOR GmbH Hamburg',
+                    option: 'ikor-gmbh-hamburg',
                     address1: 'Borselstraße 20',
                     address2: '',
                     city: 'Hamburg',
@@ -198,7 +190,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'IKOR GmbH Essen',
+                    label: 'IKOR GmbH Essen',
+                    option: 'ikor-gmbh-essen',
                     address1: 'Huyssenallee 86-88',
                     address2: '',
                     city: 'Essen',
@@ -207,7 +200,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'IKOR GmbH Köln',
+                    label: 'IKOR GmbH Köln',
+                    option: 'ikor-gmbh-koln',
                     address1: 'Siegburger Straße 223',
                     address2: '',
                     city: 'Köln',
@@ -216,7 +210,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'IKOR Polska Sp. z o.o. (Warszawa)',
+                    label: 'IKOR Polska Sp. z o.o. (Warszawa)',
+                    option: 'ikor-polska-warszawa',
                     address1: 'ul. Rondo ONZ 1',
                     address2: '',
                     city: 'Warszawa',
@@ -225,7 +220,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'IKOR Polska Sp. z o.o. (Wrocław)',
+                    label: 'IKOR Polska Sp. z o.o. (Wrocław)',
+                    option: 'ikor-polska-wroclaw',
                     address1: 'Świdnicka 12-16',
                     address2: '',
                     city: 'Wrocław',
@@ -234,7 +230,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'IKOR Austria GmbH',
+                    label: 'IKOR Austria GmbH',
+                    option: 'ikor-austria-gmbh',
                     address1: 'Altmannsdorfer Strasse 89/7',
                     address2: '',
                     city: 'Wien',
@@ -243,7 +240,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'IKOR Development Center d.o.o. Beograd',
+                    label: 'IKOR Development Center d.o.o. Beograd',
+                    option: 'ikor-development-center-beograd',
                     address1: 'Birčaninova 7',
                     address2: '',
                     city: 'Beograd',
@@ -252,7 +250,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'IKOR PX',
+                    label: 'IKOR PX',
+                    option: 'ikor-px',
                     address1: '91 Wimpole St',
                     address2: '',
                     city: 'London',
@@ -261,7 +260,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'Informationsfabrik GmbH',
+                    label: 'Informationsfabrik GmbH',
+                    option: 'informationsfabrik-gmbh',
                     address1: 'Albersloher Weg 10c',
                     address2: '',
                     city: 'Münster',
@@ -270,7 +270,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'matrix technology GmbH',
+                    label: 'Matrix Technology GmbH',
+                    option: 'matrix-technology-gmbh',
                     address1: 'Nymphenburger Str. 1',
                     address2: '',
                     city: 'München',
@@ -279,7 +280,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'STRANGE Consult GmbH (Tutzing)',
+                    label: 'STRANGE Consult GmbH (Tutzing)',
+                    option: 'strange-consult-tutzing',
                     address1: 'Herzogstandstraße 5',
                     address2: '',
                     city: 'Tutzing',
@@ -288,7 +290,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'STRANGE Consult GmbH (Darmstadt)',
+                    label: 'STRANGE Consult GmbH (Darmstadt)',
+                    option: 'strange-consult-darmstadt',
                     address1: 'Rösslerstrasse 88, 3rd floor',
                     address2: '',
                     city: 'Darmstadt',
@@ -297,7 +300,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'XPACT Consulting GmbH (Jugenheim)',
+                    label: 'XPACT Consulting GmbH (Jugenheim)',
+                    option: 'xpact-consulting-jugenheim',
                     address1: 'Zur Rohrweihe 16',
                     address2: '',
                     city: 'Jugenheim',
@@ -306,7 +310,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'XPACT Consulting GmbH (Frankfurt)',
+                    label: 'XPACT Consulting GmbH (Frankfurt)',
+                    option: 'xpact-consulting-frankfurt',
                     address1: 'Solmsstraße 83',
                     address2: '',
                     city: 'Frankfurt',
@@ -315,7 +320,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'X1F GmbH (Hamburg)',
+                    label: 'X1F GmbH (Hamburg)',
+                    option: 'x1f-hamburg',
                     address1: 'Borselstraße 20',
                     address2: '',
                     city: 'Hamburg',
@@ -324,7 +330,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     phone: '',
                 },
                 {
-                    option: 'X1F GmbH (München)',
+                    label: 'X1F GmbH (München)',
+                    option: 'x1f-munchen',
                     address1: 'Nymphenburger Str. 1',
                     address2: '',
                     city: 'München',
