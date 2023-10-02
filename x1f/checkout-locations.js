@@ -1,10 +1,11 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const selectElement = document.getElementById('billing_choose_your_campus_for_delivery');
+document.addEventListener('DOMContentLoaded', function() {
+    const selectElement = document.getElementById('billing_where_do_we_need_to_deliver_your_order');
     const countrySelectElement = document.getElementById('billing_country');
 
     if (selectElement) {
         selectElement.addEventListener('change', function () {
             let selectedOption = this.value;
+            console.log(selectedOption);
 
             const addresses = [
                 {
