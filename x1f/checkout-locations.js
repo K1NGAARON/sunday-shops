@@ -110,7 +110,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 {
                     label: 'Adweko Athens',
-                    label: 'adweko-athens',
                     option: 'adweko-athens',
                     address1: 'Solonos 53 and Sina (room 319)',
                     address2: '',
@@ -121,7 +120,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 {
                     label: 'BasisTeam IT Service & Consulting GmbH',
-                    label: 'basisteam-it-service-consulting',
                     option: 'basisteam-it',
                     address1: 'Grabenstraße 12',
                     address2: '',
@@ -211,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     phone: '',
                 },
                 {
-                    label: 'IKOR Polska Sp. z o.o. (Warszawa)',
+                    label: 'IKOR Polska Sp. z o.o. Warszawa',
                     option: 'ikor-polska-warszawa',
                     address1: 'ul. Rondo ONZ 1',
                     address2: '',
@@ -221,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     phone: '',
                 },
                 {
-                    label: 'IKOR Polska Sp. z o.o. (Wrocław)',
+                    label: 'IKOR Polska Sp. z o.o. Wrocław',
                     option: 'ikor-polska-wroclaw',
                     address1: 'Świdnicka 12-16',
                     address2: '',
@@ -281,7 +279,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     phone: '',
                 },
                 {
-                    label: 'STRANGE Consult GmbH (Tutzing)',
+                    label: 'STRANGE Consult GmbH Tutzing',
                     option: 'strange-consult-tutzing',
                     address1: 'Herzogstandstraße 5',
                     address2: '',
@@ -291,7 +289,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     phone: '',
                 },
                 {
-                    label: 'STRANGE Consult GmbH (Darmstadt)',
+                    label: 'STRANGE Consult GmbH Darmstadt',
                     option: 'strange-consult-darmstadt',
                     address1: 'Rösslerstrasse 88, 3rd floor',
                     address2: '',
@@ -301,7 +299,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     phone: '',
                 },
                 {
-                    label: 'XPACT Consulting GmbH (Jugenheim)',
+                    label: 'XPACT Consulting GmbH Jugenheim',
                     option: 'xpact-consulting-jugenheim',
                     address1: 'Zur Rohrweihe 16',
                     address2: '',
@@ -311,7 +309,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     phone: '',
                 },
                 {
-                    label: 'XPACT Consulting GmbH (Frankfurt)',
+                    label: 'XPACT Consulting GmbH Frankfurt',
                     option: 'xpact-consulting-frankfurt',
                     address1: 'Solmsstraße 83',
                     address2: '',
@@ -321,7 +319,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     phone: '',
                 },
                 {
-                    label: 'X1F GmbH (Hamburg)',
+                    label: 'X1F GmbH Hamburg',
                     option: 'x1f-hamburg',
                     address1: 'Borselstraße 20',
                     address2: '',
@@ -331,7 +329,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     phone: '',
                 },
                 {
-                    label: 'X1F GmbH (München)',
+                    label: 'X1F GmbH München',
                     option: 'x1f-munchen',
                     address1: 'Nymphenburger Str. 1',
                     address2: '',
@@ -340,6 +338,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     country: 'DE',
                     phone: '',
                 },
+                {
+                    label: 'Remote',
+                    option: 'remote',
+                    address1: '',
+                    address2: '',
+                    city: '',
+                    zip: '',
+                    country: '',
+                    phone: '',
+                }
             ];
 
             const selectedAddressData = addresses.find((addressData) => addressData.option === selectedOption);
