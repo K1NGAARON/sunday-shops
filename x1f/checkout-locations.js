@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (selectElement) {
         selectElement.addEventListener('change', function () {
             let selectedOption = this.value;
-            console.log(selectedOption);
 
             const addresses = [
                 {
