@@ -1697,7 +1697,6 @@ $(document).ready(function() {
         if (productsSIzeCharts.hasOwnProperty(productID)) {
             return productsSIzeCharts[productID];
         } else {
-            // If the product ID is not found in the object, return null or any other default value
             return null;
         }
     }
