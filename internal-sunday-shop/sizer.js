@@ -1693,7 +1693,6 @@ $(document).ready(function() {
 
     // Retrieve product ID
     function getMeasurementChart(productID) {
-        // Check if the product ID exists in the productsSizeCharts object
         if (productsSIzeCharts.hasOwnProperty(productID)) {
             return productsSIzeCharts[productID];
         } else {
@@ -1701,7 +1700,6 @@ $(document).ready(function() {
         }
     }
     
-    // Call your existing function to retrieve the product ID
     function retrieveProductID() {
         let formElement = document.querySelector('.cart');
         let productId = formElement.getAttribute('data-product_id');
@@ -1718,7 +1716,6 @@ $(document).ready(function() {
         console.log("No measurement chart found for this product.");
     }
 
-    //  Retrieve product ID
     if (window.location.href.includes("/product/")) {
         retrieveProductID();
     };
