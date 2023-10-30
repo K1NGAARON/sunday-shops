@@ -1,4 +1,4 @@
- document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const selectElement = document.getElementById('billing_choose_your_campus_for_delivery');
     const countrySelectElement = document.getElementById('billing_country');
 
@@ -11,7 +11,7 @@
             let zipCodeField = document.getElementById('billing_postcode');
             let phoneField = document.getElementById('billing_phone');
 
-            let address1, address2, city, zip, country, phone; // Declare the variables
+            let address1, address2, city, zip, country, phone;
 
         switch (selectedOption) {
             case 'Malta - Chiliz':
@@ -31,10 +31,10 @@
                 phone = '';
                 break;
             case 'Istanbul - Socios Türkiye':
-                address1 = '';
-                address2 = '';
-                city = '';
-                zip = '';
+                address1 = 'Nisbetiye Mahallesi Fecri Ebcioğlu Sokak no4 RSD Plaza kat6 Beşiktaş';
+                address2 = 'Socios Türkiye Teknoloji ve Dijital Pazarlama A.Ş';
+                city = 'Istanbul';
+                zip = '34340';
                 country = 'TR';
                 phone = '';
                 break;
