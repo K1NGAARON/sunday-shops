@@ -261,6 +261,16 @@ p {
     flex: 1 0;
 }
 
+.description_tab {
+    display: none!important;
+}
+
+@media (max-width: 560px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
 .sizechart th {
     background-color: var(--black);
     color: var(--white);
