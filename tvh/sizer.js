@@ -63,56 +63,56 @@ $(document).ready(function() {
                 A: 71, 
             }
         },
-        "polo-male": {
+        "polo-male": { // DONE
             "XS": {
-                A: 50.5, 
+                A: 51, 
             },
             "S": {
-                A: 52.5, 
+                A: 53, 
             },
             "M": {
-                A: 54.5, 
+                A: 55, 
             },
             "L": {
-                A: 56.5, 
+                A: 57, 
             },
             "XL": {
-                A: 58.5, 
+                A: 59, 
             },
             "2XL": {
-                A: 60.5, 
+                A: 61, 
             },
             "3XL": {
-                A: 62.5, 
+                A: 63, 
             },
             "4XL": {
-                A: 64.5, 
+                A: 65, 
             }
         },
-        "polo-female": {
+        "polo-female": { // DONE
             "XS": {
-                A: 50.5, 
+                A: 44, 
             },
             "S": {
-                A: 52.5, 
+                A: 46, 
             },
             "M": {
-                A: 54.5, 
+                A: 48, 
             },
             "L": {
-                A: 56.5, 
+                A: 50, 
             },
             "XL": {
-                A: 58.5, 
+                A: 52, 
             },
             "2XL": {
-                A: 60.5, 
+                A: 54, 
             },
             "3XL": {
-                A: 62.5, 
+                A: 56, 
             },
             "4XL": {
-                A: 64.5, 
+                A: 58, 
             }
         },
         "bodywarmer": { // DONE
@@ -167,30 +167,30 @@ $(document).ready(function() {
                 A: 65.5, 
             }
         },
-        "business-shirt-longsleeve-female": {
+        "business-shirt-longsleeve-female": { // DONE
             "XS": {
-                A: 51.5, 
+                A: 47, 
             },
             "S": {
-                A: 53.5, 
+                A: 49, 
             },
             "M": {
-                A: 55.5, 
+                A: 51, 
             },
             "L": {
-                A: 57.5, 
+                A: 53, 
             },
             "XL": {
-                A: 59.5, 
+                A: 55, 
             },
             "2XL": {
-                A: 61.5, 
+                A: 57, 
             },
             "3XL": {
-                A: 63.5, 
+                A: 59, 
             },
             "4XL": {
-                A: 65.5, 
+                A: 61, 
             }
         },
         "business-shirt-shortsleeve": {
@@ -298,6 +298,53 @@ $(document).ready(function() {
     waitForElementToExist('openSizer', function(element) {
         const modal = document.querySelector('#myModal');
         const openSizer = document.querySelector('#openSizer');
+
+        function updateLabelBasedOnURL() {
+            const products = {
+                winterjacket: {
+                    product_name: "winter jacket",
+                    url: "/product/winterjacket/",
+                },
+                bodywarmer: {
+                    product_name: "bodywarmer",
+                    url: "/product/bodywarmer/",
+                },
+                softhsell: {
+                    product_name: "softshell",
+                    url: "/product/softshell/",
+                },
+                polo: {
+                    product_name: "polo",
+                    url: "/product/polo",
+                },
+                business_shirt: {
+                    product_name: "business shirt",
+                    url: "/product/business-shirt",
+                },
+            };
+          
+            // Get the current URL
+            const currentURL = window.location.pathname;
+          
+            // Initialize a default product name
+            let product = "product";
+          
+            // Check if the current URL matches any of the products
+            for (const key in products) {
+              if (currentURL.includes(products[key].url)) {
+                product = products[key].product_name;
+                break;
+              }
+            }
+          
+            // Update the label element's text
+            const labelElement = document.querySelector('label[for="chestSize"]');
+            if (labelElement) {
+              labelElement.textContent = `Enter the cm's of your favorite ${product}`;
+            }
+        }
+          
+        updateLabelBasedOnURL();
 
         function showPopUp(e) {
             modal.style.display = "block";
