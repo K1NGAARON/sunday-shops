@@ -11,6 +11,10 @@
     --transition: all .25s ease-in-out
 }
 
+.woocommerce-tabs.wc-tabs-wrapper {
+	display: none;
+}
+
 .product-nav-item-inner .product-nav-item-price,
 #tab-title-additional_information,
 .woocommerce-checkout-review-order-table .cart-subtotal,
@@ -29,6 +33,12 @@ table .product-subtotal,
 .woocommerce-additional-fields,
 .faq .accordion-list .accordion-item .accordion-body {
 	display: none;
+}
+
+.product-loop-wrapper .button,
+.product-loop-meta a,
+.product-loop-meta:not(.no-transform) .button:hover {
+	color: var(--primary);
 }
 
 .cart_item .product-total,
@@ -240,7 +250,7 @@ li::marker {
 }
  
 .woocommerce-form-coupon-toggle {
-    background-color: #3F84C5;
+    background-color: var(--primary);
     padding: 10px 20px;
     color: var(--white);
     border-radius: 9px;
