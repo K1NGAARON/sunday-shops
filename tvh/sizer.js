@@ -13,7 +13,7 @@ $(document).ready(function() {
     };
     
     const sizeCharts = {
-        "winterjacket": { // DONE
+        "winterjacket": {
             "XS": {
                 A: 49, 
             },
@@ -39,7 +39,7 @@ $(document).ready(function() {
                 A: 70, 
             }
         },
-        "softshell": { // DONE
+        "softshell": {
             // "XS": {
             //     A: 52, 
             // },
@@ -65,7 +65,7 @@ $(document).ready(function() {
                 A: 71, 
             }
         },
-        "polo-male": { // DONE
+        "polo-male": {
             "XS": {
                 A: 51, 
             },
@@ -91,7 +91,7 @@ $(document).ready(function() {
                 A: 65, 
             }
         },
-        "polo-female": { // DONE
+        "polo-female": {
             "XS": {
                 A: 44, 
             },
@@ -117,7 +117,7 @@ $(document).ready(function() {
                 A: 58, 
             }
         },
-        "bodywarmer": { // DONE
+        "bodywarmer": {
             // "XS": {
             //     A: 51.5, 
             // },
@@ -143,7 +143,7 @@ $(document).ready(function() {
                 A: 72, 
             }
         },
-        "business-shirt-longsleeve-male-regular": { // DONE
+        "business-shirt-longsleeve-male-regular": {
             "XS": {
                 A: 53, 
             },
@@ -169,7 +169,7 @@ $(document).ready(function() {
                 A: 67, 
             }
         },
-        "business-shirt-longsleeve-male-tailored": { // DONE
+        "business-shirt-longsleeve-male-tailored": {
             "XS": {
                 A: 51, 
             },
@@ -195,7 +195,7 @@ $(document).ready(function() {
                 A: 65, 
             }
         },
-        "business-shirt-longsleeve-female": { // DONE
+        "business-shirt-longsleeve-female": {
             "XS": {
                 A: 47, 
             },
@@ -221,7 +221,7 @@ $(document).ready(function() {
                 A: 61, 
             }
         },
-        "business-shirt-shortsleeve-male-regular": { // DONE
+        "business-shirt-shortsleeve-male-regular": {
             "XS": {
                 A: 53, 
             },
@@ -247,7 +247,7 @@ $(document).ready(function() {
                 A: 67, 
             }
         },
-        "business-shirt-shortsleeve-male-tailored": { // DONE
+        "business-shirt-shortsleeve-male-tailored": {
             "XS": {
                 A: 51, 
             },
@@ -277,7 +277,6 @@ $(document).ready(function() {
 
     // Retrieve product ID
     function getMeasurementChart(productID) {
-        // Check if the product ID exists in the productsSizeCharts object
         if (productsSIzeCharts.hasOwnProperty(productID)) {
             return productsSIzeCharts[productID];
         } else {
@@ -302,12 +301,10 @@ $(document).ready(function() {
         return;
     }
 
-    //  Retrieve product ID
     if (window.location.href.includes("/product/")) {
         retrieveProductID();
     };
     
-
     // Add sizer pop up button
     const variationsElement = document.querySelector('.woocommerce-product-details__short-description');
     if (variationsElement) {
@@ -377,13 +374,11 @@ $(document).ready(function() {
                 },
             };
           
-            // Get the current URL
             const currentURL = window.location.pathname;
           
             // Initialize a default product name
             let product = "product";
           
-            // Check if the current URL matches any of the products
             for (const key in products) {
               if (currentURL.includes(products[key].url)) {
                 product = products[key].product_name;
@@ -391,7 +386,6 @@ $(document).ready(function() {
               }
             }
           
-            // Update the label element's text
             const labelElement = document.querySelector('label[for="chestSize"]');
             if (labelElement) {
               labelElement.textContent = `Enter the cm's of your favorite ${product}`;
@@ -495,7 +489,6 @@ $(document).ready(function() {
             hidePopUp();
         }
 
-        // Modal functions 
         openSizer.addEventListener('click', showPopUp);
         span.addEventListener('click', hidePopUp);
     })
