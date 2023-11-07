@@ -12,9 +12,9 @@ $(document).ready(function() {
     
     const sizeCharts = {
         "winterjacket": { // DONE
-            // "XS": {
-            //     A: 52, 
-            // },
+            "XS": {
+                A: 49, 
+            },
             "S": {
                 A: 52, 
             },
@@ -33,9 +33,9 @@ $(document).ready(function() {
             "3XL": {
                 A: 67, 
             },
-            // "4XL": {
-            //     A: 65.5, 
-            // }
+            "4XL": {
+                A: 70, 
+            }
         },
         "softshell": { // DONE
             // "XS": {
@@ -227,7 +227,6 @@ $(document).ready(function() {
         if (productsSIzeCharts.hasOwnProperty(productID)) {
             return productsSIzeCharts[productID];
         } else {
-            // If the product ID is not found in the object, return null or any other default value
             return null;
         }
     }
@@ -246,7 +245,7 @@ $(document).ready(function() {
         console.log(productId);
         console.log(`Use measurement chart: ${sizeChart}`);
     } else {
-        console.log("No measurement chart found for this product.");
+        return;
     }
 
     //  Retrieve product ID
@@ -324,7 +323,6 @@ $(document).ready(function() {
             let sizeChart = getMeasurementChart(productId);
         
             if (!sizeChart) {
-                console.log("No measurement chart found for this product.");
                 return;
             }
         
@@ -336,7 +334,7 @@ $(document).ready(function() {
         
             const closestSize = calculateSize(inputValue, roundUpCheckbox, measurements);
         
-            console.log(closestSize);
+            console.log("closest size:", closestSize);
         
             const printResult = document.querySelector('#sizeResult');
             printResult.innerHTML = closestSize;
@@ -346,7 +344,6 @@ $(document).ready(function() {
 
         function calculateSize(inputValue, roundUpCheckbox, measurements) {
             if (!measurements) {
-                console.log("No measurement chart found.");
                 return;
             }
         
@@ -362,7 +359,7 @@ $(document).ready(function() {
                 return "Your size is outside our measurement chart. Please select the 'other size' below.";
             }
         
-            let closestSize = '';
+            // let closestSize = '';
             let smallestDifference = Infinity;
         
             // Iterate over the sizes (XS, S, M, ...) in the measurements object
