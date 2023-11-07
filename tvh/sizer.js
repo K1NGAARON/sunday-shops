@@ -5,9 +5,11 @@ $(document).ready(function() {
         1275: "polo-male",
         1631: "polo-female",
         1264: "bodywarmer",
-        1265: "business-shirt-longsleeve-male",
+        1265: "business-shirt-longsleeve-male-regular",
+        1650: "business-shirt-longsleeve-male-tailored",
         1640: "business-shirt-longsleeve-female",
-        1402: "business-shirt-shortsleeve"
+        1402: "business-shirt-shortsleeve-male-regular",
+        1659: "business-shirt-shortsleeve-male-tailored",
     };
     
     const sizeCharts = {
@@ -141,30 +143,56 @@ $(document).ready(function() {
                 A: 72, 
             }
         },
-        "business-shirt-longsleeve-male": {
+        "business-shirt-longsleeve-male-regular": { // DONE
             "XS": {
-                A: 51.5, 
+                A: 53, 
             },
             "S": {
-                A: 53.5, 
+                A: 55, 
             },
             "M": {
-                A: 55.5, 
+                A: 57, 
             },
             "L": {
-                A: 57.5, 
+                A: 59, 
             },
             "XL": {
-                A: 59.5, 
+                A: 61, 
             },
             "2XL": {
-                A: 61.5, 
+                A: 63, 
             },
             "3XL": {
-                A: 63.5, 
+                A: 65, 
             },
             "4XL": {
-                A: 65.5, 
+                A: 67, 
+            }
+        },
+        "business-shirt-longsleeve-male-tailored": { // DONE
+            "XS": {
+                A: 51, 
+            },
+            "S": {
+                A: 53, 
+            },
+            "M": {
+                A: 55, 
+            },
+            "L": {
+                A: 57, 
+            },
+            "XL": {
+                A: 59, 
+            },
+            "2XL": {
+                A: 61, 
+            },
+            "3XL": {
+                A: 63, 
+            },
+            "4XL": {
+                A: 65, 
             }
         },
         "business-shirt-longsleeve-female": { // DONE
@@ -193,30 +221,56 @@ $(document).ready(function() {
                 A: 61, 
             }
         },
-        "business-shirt-shortsleeve": {
+        "business-shirt-shortsleeve-male-regular": { // DONE
             "XS": {
-                A: 51.5, 
+                A: 53, 
             },
             "S": {
-                A: 53.5, 
+                A: 55, 
             },
             "M": {
-                A: 55.5, 
+                A: 57, 
             },
             "L": {
-                A: 57.5, 
+                A: 59, 
             },
             "XL": {
-                A: 59.5, 
+                A: 61, 
             },
             "2XL": {
-                A: 61.5, 
+                A: 63, 
             },
             "3XL": {
-                A: 63.5, 
+                A: 65, 
             },
             "4XL": {
-                A: 65.5, 
+                A: 67, 
+            }
+        },
+        "business-shirt-shortsleeve-male-tailored": { // DONE
+            "XS": {
+                A: 51, 
+            },
+            "S": {
+                A: 53, 
+            },
+            "M": {
+                A: 55, 
+            },
+            "L": {
+                A: 57, 
+            },
+            "XL": {
+                A: 59, 
+            },
+            "2XL": {
+                A: 61, 
+            },
+            "3XL": {
+                A: 63, 
+            },
+            "4XL": {
+                A: 65, 
             }
         },
     }
