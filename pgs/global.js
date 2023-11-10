@@ -47,8 +47,8 @@ function sizeChartText(e) {
     
     function checkAndHideOneSizeTable() {
         const oneSizeProductsURL = [
-            'https://pgs.shop.teamsunday.com/product/foute-kersttrui-man/',
-            'https://pgs.shop.teamsunday.com/product/foute-kersttrui-vrouw/',
+            //'https://pgs.shop.teamsunday.com/product/foute-kersttrui-man/',
+            //'https://pgs.shop.teamsunday.com/product/foute-kersttrui-vrouw/',
             'https://pgs.shop.teamsunday.com/product/softshell/',
             'https://pgs.shop.teamsunday.com/product/business-shirt/',
             'https://pgs.shop.teamsunday.com/product/muts/',
@@ -83,8 +83,8 @@ $(document).ready(function() {
 
     if (variationsElement) {
         const oneSizeProductsURL = [
-            'https://pgs.shop.teamsunday.com/product/foute-kersttrui-man/',
-            'https://pgs.shop.teamsunday.com/product/foute-kersttrui-vrouw/',
+            //'https://pgs.shop.teamsunday.com/product/foute-kersttrui-man/',
+            //'https://pgs.shop.teamsunday.com/product/foute-kersttrui-vrouw/',
             'https://pgs.shop.teamsunday.com/product/softshell/',
             'https://pgs.shop.teamsunday.com/product/business-shirt/',
             'https://pgs.shop.teamsunday.com/product/muts/',
