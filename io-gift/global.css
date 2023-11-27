@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira:wght@500;700&display=swap');
+
                 
 :root {
     /*--primary: #0013EE;*/
-	--primary: #FE9685;
+	--primary: #0017EE;
 	--green: #006A52;
     --white: #ffffff;
     --black: #000000;
@@ -11,9 +12,6 @@
     --transition: all .25s ease-in-out
 }
 
-.woocommerce-tabs.wc-tabs-wrapper {
-	display: none;
-}
 
 .product-nav-item-inner .product-nav-item-price,
 #tab-title-additional_information,
@@ -53,6 +51,10 @@ table .product-total,
                                                 
 * {
     font-family: var(--fontFamily);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--black);
 }
 
 h1,
@@ -176,8 +178,13 @@ li::marker {
     background-color: var(--primary)!important;
 }
 
-.woocommerce-info {
-    background-color: red;
+.woocommerce-info,
+.woocommerce-error {
+    background-color: firebrick;
+}
+
+.woocommerce-message {
+	background-color: green;
 }
 
 .woocommerce-notice.woocommerce-notice--info.woocommerce-info {
@@ -534,4 +541,16 @@ li::marker {
 
 .woocommerce-checkout-review-order .shop_table.woocommerce-checkout-review-order-table .cart_item .product-total {
     display: unset!important;
+}
+
+#order_review {
+	background-color: #F4F4F4
+}
+
+.product-summary .product_title.entry-title {
+    color: var(--black);
+}
+
+.product-summary .woocommerce-Price-amount.amount {
+    color: #8f8f8f;
 }

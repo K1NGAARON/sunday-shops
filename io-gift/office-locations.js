@@ -11,10 +11,18 @@ document.addEventListener('DOMContentLoaded', function() {
             let zipCodeField = document.getElementById('billing_postcode');
             let phoneField = document.getElementById('billing_phone');
 
-            let address1, address2, city, zip, country, phone;
+            let address1, address2, city, zip, country, phone; // Declare the variables
 
         switch (selectedOption) {
             case 'iO - Campus Amsterdam':
+                address1 = 'Spaklerweg 52';
+                address2 = 'iO Campus';
+                city = 'Amsterdam';
+                zip = '1114 AE';
+                country = 'NL';
+                phone = '+31 20 3057205';
+                break;
+            case 'iO - Consultancy':
                 address1 = 'Spaklerweg 52';
                 address2 = 'iO Campus';
                 city = 'Amsterdam';
