@@ -70,8 +70,7 @@ table .product-subtotal {
 .single_variation,
 .reset_variations,
 .sku_wrapper,
-.woostify-single-product-stock.stock,
-.site-footer {
+.woostify-single-product-stock.stock {
     display: none!important;
 }
 
@@ -438,6 +437,10 @@ p {
   color: var(--black);
   text-align: left;
   opacity: 0.5;
+}
+
+.faq .accordion-list .accordion-item .accordion-body a {
+	text-decoration: underline;
 }
 
 @media (max-width: 560px) {
