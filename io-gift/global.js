@@ -76,9 +76,19 @@ function sizeChartText(e) {
     checkAndHideOneSizeTable();
 }
 
+function changeLinkToHome(e) {
+    const button = document.querySelector('.return-to-shop .button.wc-backward');
+
+    if (button) {
+        url = "https://io-gift.shop.teamsunday.com"
+        $(button).attr('href', url);
+    }
+}
+
 $(document).ready(function() {
     sizeChartText();
 	addPriceIcon();
+    changeLinkToHome();
 	
 	setTimeout(function() {
         replaceErrorText();
