@@ -10,14 +10,21 @@
     --transition: all .25s ease-in-out
 }
 
+.topbar {
+	background-color: var(--primary);
+	font-weight: 700;
+	padding: 5px;
+}
+
 .product-nav-item-inner .product-nav-item-price {
 	display: none;
 }
 
-.woocommerce-checkout-review-order-table .cart-subtotal,
+/* .woocommerce-checkout-review-order-table .cart-subtotal,
 .woocommerce-checkout-review-order-table .order-total {
-	display: none;
+	display: none; 
 }
+*/
 
 .cart_item .product-total {
 	display: none!important;
