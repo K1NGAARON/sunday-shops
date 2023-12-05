@@ -55,14 +55,16 @@ function sizeChartText(e) {
     function checkAndHideOneSizeTable() {
         const oneSizeProductsURL = [
             'https://io-gift.shop.teamsunday.com/product/io-backpack/',
-			'https://io-gift.shop.teamsunday.com/product/io-laptop-sleeve/'
+			'https://io-gift.shop.teamsunday.com/product/io-laptop-sleeve-black/',
+            'https://io-gift.shop.teamsunday.com/product/io-laptop-sleeve-blue/',
+            'https://io-gift.shop.teamsunday.com/product/charity/'
         ];
     
         const currentURL = window.location.href;
       
         if (oneSizeProductsURL.includes(currentURL)) {
             hideOneSizeTable();
-            $('.sizer-holder').hide();
+            $('.woocommerce-tabs').hide();
         }
     };
 
