@@ -17,28 +17,6 @@ $('.accordion-item').click(function () {
     $(this).children('.accordion-head').children('.icon').children('i').addClass('fa-minus');
 });
 
-
-function addPriceIcon(e) {
-    const priceTargets = document.querySelectorAll('.price');
-
-    if (!priceTargets) {
-        return;
-    } else {
-        priceTargets.forEach(priceTarget => {
-            const spanElement = document.createElement('span');
-            spanElement.className = 'woocommerce-Price-amount amount';
-
-            const textNode = document.createTextNode('PGS-coins');
-            spanElement.appendChild(textNode);
-            priceTarget.appendChild(spanElement);
-        });
-    };
-};
-
-$(document).ready(function() {
-	addPriceIcon()
-})
-
 function sizeChartText(e) {
     function hideOneSizeTable() {
         const table = document.querySelector('.variations');
@@ -48,11 +26,6 @@ function sizeChartText(e) {
     function checkAndHideOneSizeTable() {
         const oneSizeProductsURL = [
             //'https://pgs.shop.teamsunday.com/product/foute-kersttrui-man/',
-            //'https://pgs.shop.teamsunday.com/product/foute-kersttrui-vrouw/',
-            'https://pgs.shop.teamsunday.com/product/softshell/',
-            'https://pgs.shop.teamsunday.com/product/business-shirt/',
-            'https://pgs.shop.teamsunday.com/product/muts/',
-            'https://pgs.shop.teamsunday.com/product/sjaal/'
         ];
     
         const currentURL = window.location.href;
@@ -60,10 +33,8 @@ function sizeChartText(e) {
         if (oneSizeProductsURL.includes(currentURL)) {
             hideOneSizeTable();
             $('.sizer-holder').hide();
-            console.log('hide this item')
         }
     };
-
 
     const title = document.querySelector('.description_tab a');
 
@@ -84,29 +55,12 @@ $(document).ready(function() {
     if (variationsElement) {
         const oneSizeProductsURL = [
             //'https://pgs.shop.teamsunday.com/product/foute-kersttrui-man/',
-            //'https://pgs.shop.teamsunday.com/product/foute-kersttrui-vrouw/',
-            'https://pgs.shop.teamsunday.com/product/softshell/',
-            'https://pgs.shop.teamsunday.com/product/business-shirt/',
-            'https://pgs.shop.teamsunday.com/product/muts/',
-            'https://pgs.shop.teamsunday.com/product/sjaal/',
-            'https://pgs.shop.teamsunday.com/product/weekendtas/',
-            'https://pgs.shop.teamsunday.com/product/backpack/'
         ];
 
         const currentURL = window.location.href;
 
         if (oneSizeProductsURL.includes(currentURL)) {
             return;
-            /*
-                CHECK THIS THING
-            */
-            const anchorElement = `
-                <div class="sizer-holder">
-                    <a id="openSizer">Calculate Size</a>
-                </div>
-            `;
-            variationsElement.insertAdjacentHTML('beforeend', anchorElement);
-
         } else {
             const anchorElement = `
                 <div class="sizer-holder">
