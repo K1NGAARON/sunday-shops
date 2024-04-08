@@ -25,7 +25,7 @@ function sizeChartText(e) {
     
     function checkAndHideOneSizeTable() {
         const oneSizeProductsURL = [
-            //'https://pgs.shop.teamsunday.com/product/foute-kersttrui-man/',
+            
         ];
     
         const currentURL = window.location.href;
@@ -55,7 +55,7 @@ $(document).ready(function() {
 
     if (variationsElement) {
         const oneSizeProductsURL = [
-            //'https://pgs.shop.teamsunday.com/product/foute-kersttrui-man/',
+            
         ];
 
         const currentURL = window.location.href;
