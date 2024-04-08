@@ -25,7 +25,7 @@ function sizeChartText(e) {
     
     function checkAndHideOneSizeTable() {
         const oneSizeProductsURL = [
-            //'https://pgs.shop.teamsunday.com/product/foute-kersttrui-man/',
+
         ];
     
         const currentURL = window.location.href;
@@ -45,8 +45,26 @@ function sizeChartText(e) {
     checkAndHideOneSizeTable();
 }
 
+function addPriceIcon(e) {
+    const priceTargets = document.querySelectorAll('.price');
+
+    if (!priceTargets) {
+        return;
+    } else {
+        priceTargets.forEach(priceTarget => {
+            const spanElement = document.createElement('span');
+            spanElement.className = 'woocommerce-Price-amount amount';
+
+            const textNode = document.createTextNode('AVR Coins');
+            spanElement.appendChild(textNode);
+            priceTarget.appendChild(spanElement);
+        });
+    };
+};
+
 $(document).ready(function() {
     sizeChartText();
+    // addPriceIcon();
 });
 
 $(document).ready(function() {
@@ -54,7 +72,7 @@ $(document).ready(function() {
 
     if (variationsElement) {
         const oneSizeProductsURL = [
-            //'https://pgs.shop.teamsunday.com/product/foute-kersttrui-man/',
+
         ];
 
         const currentURL = window.location.href;
