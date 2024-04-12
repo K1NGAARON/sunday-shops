@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const selectElement = document.getElementById('billing_where_do_we_need_to_deliver_your_order');
+    const selectElement = document.getElementById('billing_delivery_location');
     const countrySelectElement = document.getElementById('billing_country');
 
     if (selectElement) {
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const addresses = [
                 {
-                    label: 'Adweko Headquarter Walldorf',
+                    label: 'ADWEKO, Headquarter Walldorf',
                     option: 'adweko-headquarter-walldorf',
                     address1: 'Altrottstraße 31',
                     address2: '',
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     phone: '',
                 },
                 {
-                    label: 'Adweko Stuttgart',
+                    label: 'ADWEKO, Stuttgart',
                     option: 'adweko-stuttgart',
                     address1: 'Maybachstraße 20',
                     address2: '',
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     phone: '',
                 },
                 {
-                    label: 'Adweko Frankfurt',
+                    label: 'ADWEKO, Frankfurt',
                     option: 'adweko-frankfurt',
                     address1: 'Mainzer Landstraße 180',
                     address2: '',
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     phone: '',
                 },
                 {
-                    label: 'Adweko Berlin',
+                    label: 'ADWEKO, Berlin',
                     option: 'adweko-berlin',
                     address1: 'Stresemannstraße 123c',
                     address2: '',
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     phone: '',
                 },
                 {
-                    label: 'Adweko Hamburg',
+                    label: 'ADWEKO, Hamburg',
                     option: 'adweko-hamburg',
                     address1: 'Willy-Brandt-Straße 23',
                     address2: '',
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     phone: '',
                 },
                 {
-                    label: 'Adweko Hannover',
+                    label: 'ADWEKO, Hannover',
                     option: 'adweko-hannover',
                     address1: 'Bödekerstraße 1',
                     address2: '',
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     phone: '',
                 },
                 {
-                    label: 'Adweko Hungary Kft',
+                    label: 'ADWEKO, Hungary Kft',
                     option: 'adweko-hungary-kft',
                     address1: '1036 Budapest, Lajos u. 66, 3. emelet',
                     address2: '',
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     phone: '',
                 },
                 {
-                    label: 'Adweko Global Ltd',
+                    label: 'ADWEKO, Global Ltd',
                     option: 'adweko-global-ltd',
                     address1: '13 Princeton Court, 53 to 55 Felsham Road',
                     address2: '',
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     phone: '',
                 },
                 {
-                    label: 'Adweko America Inc',
+                    label: 'ADWEKO, America Inc',
                     option: 'adweko-america-inc',
                     address1: '801 Brickell Avenue / 8th Floor',
                     address2: '',
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     phone: '',
                 },
                 {
-                    label: 'Adweko Canada Inc',
+                    label: 'ADWEKO, Canada Inc',
                     option: 'adweko-canada-inc',
                     address1: 'First Canadian Pace, 100 King Street West, Suite 5600',
                     address2: '',
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     phone: '',
                 },
                 {
-                    label: 'Adweko Athens',
+                    label: 'ADWEKO, Athens',
                     option: 'adweko-athens',
                     address1: 'Solonos 53 and Sina (room 319)',
                     address2: '',
@@ -145,16 +145,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     city: 'Boston',
                     zip: '02109',
                     country: 'US',
-                    phone: '',
-                },
-                {
-                    label: 'e2 Security GmbH',
-                    option: 'e-2-security-gmbh',
-                    address1: 'Rabinstraße 1',
-                    address2: '',
-                    city: 'Bonn',
-                    zip: '53111',
-                    country: 'DE',
                     phone: '',
                 },
                 {
@@ -337,6 +327,46 @@ document.addEventListener('DOMContentLoaded', function() {
                     country: 'DE',
                     phone: '',
                 },
+                {
+                    label: 'KE Associates, Eschborn',
+                    option: 'ke-associates-eschborn',
+                    address1: 'Kölner Str. 3',
+                    address2: '',
+                    city: 'Eschborn',
+                    zip: '65760',
+                    country: 'DE',
+                    phone: '',
+                },
+                {
+                    label: 'globaldatanet, Hamburg',
+                    option: 'globaldatanet-hamburg',
+                    address1: 'Alter Teichweg 11-13',
+                    address2: '',
+                    city: 'Hamburg',
+                    zip: '22081',
+                    country: 'DE',
+                    phone: '',
+                },
+                {
+                    label: 'globaldatanet, Serbia',
+                    option: 'globaldatanet-serbia',
+                    address1: 'Oračka 4',
+                    address2: '',
+                    city: 'Belgrade',
+                    zip: '11000',
+                    country: 'RS',
+                    phone: '',
+                },
+                // {
+                //     label: '',
+                //     option: '',
+                //     address1: '',
+                //     address2: '',
+                //     city: '',
+                //     zip: '',
+                //     country: '',
+                //     phone: '',
+                // },
                 {
                     label: 'Remote',
                     option: 'remote',
