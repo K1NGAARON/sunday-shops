@@ -1,3 +1,4 @@
+// Auto-fill address fields based on selected location
 document.addEventListener('DOMContentLoaded', function() {
     const selectElement = document.getElementById('billing_choose_your_campus_for_delivery');
     const countrySelectElement = document.getElementById('billing_country');
@@ -16,31 +17,31 @@ document.addEventListener('DOMContentLoaded', function() {
         switch (selectedOption) {
             case 'iO - Campus Amsterdam':
                 address1 = 'Spaklerweg 52';
-                address2 = 'iO Campus';
+                address2 = 'iO - Campus Amsterdam';
                 city = 'Amsterdam';
                 zip = '1114 AE';
                 country = 'NL';
                 phone = '+31 20 3057205';
                 break;
             case 'iO - Campus Antwerpen':
-                address1 = 'Mechelsesteenweg 271 bus 1.1';
-                address2 = 'iO Campus';
+                address1 = 'Mechelsesteenweg 271 bus 1.1, 2018';
+                address2 = 'iO - Campus Antwerpen';
                 city = 'Antwerpen';
                 zip = '2018';
                 country = 'BE';
                 phone = '+32 3 361 68 01';
                 break;
             case 'iO - Campus Brussel':
-                address1 = 'Chaussé de la Hulpe 120';
-                address2 = 'iO Campus';
+                address1 = 'Chaussée de La Hulpe 120';
+                address2 = 'iO - Campus Brussel';
                 city = 'Brussel';
                 zip = '1000';
                 country = 'BE';
                 phone = '+32 2 762 25 00';
                 break;
             case 'iO - Campus Den Bosch':
-                address1 = 'Magistratenlaan 2';
-                address2 = 'iO Campus';
+                address1 = 'Magistratenlaan 4';
+                address2 = 'iO - Campus Den Bosch';
                 city = 'Den Bosch';
                 zip = '5223 MD';
                 country = 'NL';
@@ -48,15 +49,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
             case 'iO - Campus Eindhoven':
                 address1 = 'Marconilaan 16';
-                address2 = 'iO Campus';
+                address2 = 'iO - Campus Eindhoven';
                 city = 'Eindhoven';
                 zip = '5621 AA';
                 country = 'NL';
                 phone = '+31 40 290 8979';
                 break;
             case 'iO - Campus Gent':
-                address1 = 'Raymonde de Larochelaan 15';
-                address2 = 'iO Campus';
+                address1 = 'Raymonde De Larochelaan 15';
+                address2 = 'iO - Campus Gent';
                 city = 'Gent';
                 zip = '9051';
                 country = 'BE';
@@ -64,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
             case 'iO - Campus Herentals':
                 address1 = 'Zavelheide 15';
-                address2 = 'iO Campus';
+                address2 = 'iO - Campus Herentals';
                 city = 'Herentals';
                 zip = '2200';
                 country = 'BE';
@@ -72,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
             case 'iO - Campus Rotterdam':
                 address1 = 'Blaak 16';
-                address2 = 'iO Campus';
+                address2 = 'iO - Campus Rotterdam';
                 city = 'Rotterdam';
                 zip = '3011 TA';
                 country = 'NL';
@@ -80,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
             case 'iO - Campus Utrecht':
                 address1 = 'Boven Clarenburg 2';
-                address2 = 'iO Campus';
+                address2 = 'iO - Campus Utrecht';
                 city = 'Utrecht';
                 zip = '3511 CV';
                 country = 'NL';
