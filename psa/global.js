@@ -23,7 +23,16 @@ function changeSizeChartText(e) {
     if (title) {
         title.innerHTML = 'Size Chart';
     }
-}
+};
+
+const oneSizeProductsURL = [
+    'https://psa.shop.teamsunday.com/product/psa-baseball-cap/',
+    'https://psa.shop.teamsunday.com/product/psa-travel-mug/',
+];
+
+const lowStockProducts = [
+    "https://psa.shop.teamsunday.com/product/psa-travel-mug/"
+];
 
 function sizeChartText(e) {
     function hideOneSizeTable() {
@@ -32,11 +41,6 @@ function sizeChartText(e) {
     };
     
     function checkAndHideOneSizeTable() {
-        const oneSizeProductsURL = [
-            'https://psa.shop.teamsunday.com/product/psa-baseball-cap/',
-            'https://psa.shop.teamsunday.com/product/psa-travel-mug/',
-        ];
-    
         const currentURL = window.location.href;
       
         if (oneSizeProductsURL.includes(currentURL)) {
@@ -59,11 +63,6 @@ $(document).ready(function() {
     const variationsElement = document.querySelector('.woocommerce-product-details__short-description');
 
     if (variationsElement) {
-        const oneSizeProductsURL = [
-            'https://psa.shop.teamsunday.com/product/psa-baseball-cap/',
-            'https://psa.shop.teamsunday.com/product/psa-travel-mug/',
-        ];
-
         const currentURL = window.location.href;
 
         if (oneSizeProductsURL.includes(currentURL)) {
@@ -130,17 +129,13 @@ $(document).ready(function() {
 });
 
 function addStockLabel() {
-    const lowStockProducts = [
-        "https://psa.shop.teamsunday.com/product/psa-travel-mug/"
-    ];
-
     const currentURL = window.location.href;
     let heading = document.querySelector('.product_title.entry-title');
     
     if (lowStockProducts.includes(currentURL)) {
         const label = `
-            <span class="label">Low on stock</span>
-        `;
+                        <span class="label">Low on stock</span>
+                    `;
         heading.insertAdjacentHTML('beforeend', label);
     
     } else {
