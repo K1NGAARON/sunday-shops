@@ -17,6 +17,14 @@ $('.accordion-item').click(function () {
     $(this).children('.accordion-head').children('.icon').children('i').addClass('fa-minus');
 });
 
+const oneSizeProductsURL = [
+    'https://avr-fan.shop.teamsunday.com/product/baby-bib-i-love-potatoes/',
+    'https://avr-fan.shop.teamsunday.com/product/hat-black/',
+    'https://avr-fan.shop.teamsunday.com/product/hat-grey/',
+    'https://avr-fan.shop.teamsunday.com/product/socks/',
+    'https://avr-fan.shop.teamsunday.com/product/sun-glasses/',
+];
+
 function sizeChartText(e) {
     function hideOneSizeTable() {
         const table = document.querySelector('.variations');
@@ -24,10 +32,6 @@ function sizeChartText(e) {
     };
     
     function checkAndHideOneSizeTable() {
-        const oneSizeProductsURL = [
-            
-        ];
-    
         const currentURL = window.location.href;
       
         if (oneSizeProductsURL.includes(currentURL)) {
@@ -54,10 +58,6 @@ $(document).ready(function() {
     const variationsElement = document.querySelector('.woocommerce-product-details__short-description');
 
     if (variationsElement) {
-        const oneSizeProductsURL = [
-            
-        ];
-
         const currentURL = window.location.href;
 
         if (oneSizeProductsURL.includes(currentURL)) {
