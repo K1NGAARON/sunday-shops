@@ -649,3 +649,11 @@ li::marker {
     color: var(--primary);
     text-align: center;
 }
+
+.woocommerce-products-header .term-description p {
+    color: var(--primary);
+    font-weight: 700;
+    text-align: center;
+    width: 60%;
+    margin: 40px auto;
+}
