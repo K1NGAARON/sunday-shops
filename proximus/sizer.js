@@ -1,3 +1,18 @@
+const oneSizeProductsURL = [
+    '/product/proximus-baby-body/',
+    '/product/proximus-sliders/',
+    '/product/proximus-sneakers/',
+    '/product/proximus-socks/',
+    '/nl/product/proximus-sokken/',
+    '/fr/produit/chaussettes-proximus/',
+    '/nl/product/proximus-sneakers/',
+    '/fr/produit/proximus-sneakers/',
+    '/nl/product/proximus-glijders/',
+    '/fr/produit/sliders-proximus/',
+    '/nl/product/proximus-baby-romper/',
+    '/fr/produit/proximus-baby-body/'
+];
+
 function sizeChartText(e) {
     function hideOneSizeTable() {
         const table = document.querySelector('.variations');
@@ -5,21 +20,7 @@ function sizeChartText(e) {
     };
     
     function checkAndHideOneSizeTable() {
-        const oneSizeProductsURL = [
-          	'https://proximus.shop.teamsunday.com/product/proximus-baby-body/',
-			'https://proximus.shop.teamsunday.com/product/proximus-sliders/',
-			'https://proximus.shop.teamsunday.com/product/proximus-sneakers/',
-            'https://proximus.shop.teamsunday.com/product/proximus-socks/',
-            'https://proximus.shop.teamsunday.com/nl/product/proximus-sokken/',
-            'https://proximus.shop.teamsunday.com/fr/produit/chaussettes-proximus/',
-            'https://proximus.shop.teamsunday.com/nl/product/proximus-sneakers/',
-            'https://proximus.shop.teamsunday.com/fr/produit/proximus-sneakers/',
-            'https://proximus.shop.teamsunday.com/nl/product/proximus-glijders/',
-            'https://proximus.shop.teamsunday.com/fr/produit/sliders-proximus/',
-            'https://proximus.shop.teamsunday.com/nl/product/proximus-baby-romper/',
-            'https://proximus.shop.teamsunday.com/fr/produit/proximus-baby-body/'
-        ];
-    
+
         const currentURL = window.location.href;
       
         if (oneSizeProductsURL.includes(currentURL)) {
@@ -46,21 +47,6 @@ $(document).ready(function() {
     const variationsElement = document.querySelector('.woocommerce-product-details__short-description');
 
     if (variationsElement) {
-        const oneSizeProductsURL = [
-            'https://proximus.shop.teamsunday.com/product/proximus-baby-body/',
-			'https://proximus.shop.teamsunday.com/product/proximus-sliders/',
-			'https://proximus.shop.teamsunday.com/product/proximus-sneakers/',
-            'https://proximus.shop.teamsunday.com/product/proximus-socks/',
-            'https://proximus.shop.teamsunday.com/nl/product/proximus-sokken/',
-            'https://proximus.shop.teamsunday.com/fr/produit/chaussettes-proximus/',
-            'https://proximus.shop.teamsunday.com/nl/product/proximus-sneakers/',
-            'https://proximus.shop.teamsunday.com/fr/produit/proximus-sneakers/',
-            'https://proximus.shop.teamsunday.com/nl/product/proximus-glijders/',
-            'https://proximus.shop.teamsunday.com/fr/produit/sliders-proximus/',
-            'https://proximus.shop.teamsunday.com/nl/product/proximus-baby-romper/',
-            'https://proximus.shop.teamsunday.com/fr/produit/proximus-baby-body/'
-        ];
-
         const currentURL = window.location.href;
 
         if (oneSizeProductsURL.includes(currentURL)) {
