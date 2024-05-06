@@ -80,7 +80,9 @@ li::marker {
 	font-weight: 400;
 }
 
-.primary-color {
+.primary-color,
+a.primary-color,
+.primary-color a {
 	color: var(--primary);
 }
 
