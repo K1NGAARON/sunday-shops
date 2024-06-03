@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
                 
 :root {
-    --primary: #091f40;
-    --orange: #fd6900;
+    --primary: #E51462;
     --white: #ffffff;
     --black: #000000;
 	--banner: #3B4448;
@@ -20,6 +19,15 @@
 
 .elementor-1067 .elementor-element.elementor-element-d413e2e .elementor-heading-title {
 	font-size: 60px;
+}
+
+.woocommerce-checkout-review-order-table .cart-subtotal,
+.woocommerce-checkout-review-order-table .order-total {
+	display: none;
+}
+
+.cart_item .product-total {
+	display: none!important;
 }
 
 .site-tools .tools-icon.header-search-icon {
@@ -40,7 +48,18 @@ table .product-total {
     display: none;
 }
 
+table .product-price,
+table .product-subtotal {
+	display: none;
+}
+
 #secondary {
+    display: none;
+}
+
+.product-summary .price,
+.woocommerce-mini-cart__total.total,
+.mini-cart-product-price{
     display: none;
 }
 
@@ -79,6 +98,7 @@ li::marker {
 
 /* HEADER */
 #masthead {
+    background-color: #00893E;
     padding: 10px 0;
 }
 
@@ -99,7 +119,7 @@ li::marker {
 .primary-navigation li > a,
 .primary-navigation li.current-menu-item > a,
 .primary-navigation > li.current-menu-parent > a {
-    color: var(--orange);
+    color: var(--white);
     font-weight: 700;
 }
 
@@ -107,17 +127,17 @@ li::marker {
 .site-tools .tools-icon .woostify-svg-icon,
 .woocommerce-mini-cart__total .amount,
 .primary-navigation a:hover {
-    color: var(--orange);
+    color: var(--white);
 }
 
 .shop-cart-count {
-    background-color: var(--orange);
+    background-color: var(--primary);
     color: var(--white);
 }
 
 .cart-sidebar-head .shop-cart-count,
 .shop-cart-count {
-    background-color: var(--orange);
+    background-color: var(--primary);
 }
 
 /* BUTTONS */
@@ -628,7 +648,19 @@ p {
 	display: none!important;
 }
 
+
+table .product-price,
+table .product-subtotal {
+	display: none;
+}
+
 #secondary {
+    display: none;
+}
+
+.product-summary .price,
+.woocommerce-mini-cart__total.total,
+.mini-cart-product-price{
     display: none;
 }
 
@@ -636,10 +668,19 @@ p {
 	display: none;
 }
 
-/* .product-nav-item-inner .product-nav-item-price,
+.product-nav-item-inner .product-nav-item-price,
 .woocommerce-Price-amount {
 	display: none;
-} */
+}
+
+.woocommerce-checkout-review-order-table .cart-subtotal,
+.woocommerce-checkout-review-order-table .order-total {
+	display: none;
+}
+
+.bundle_availability {
+	/* display: none!important; */
+}
 
 .in-stock {
 	display: none;
@@ -651,5 +692,9 @@ p {
 }
 
 .bundle_error {
+	display: none!important;
+}
+
+.cart_item .product-total {
 	display: none!important;
 }
