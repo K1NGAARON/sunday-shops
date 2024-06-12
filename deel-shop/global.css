@@ -679,3 +679,7 @@ p {
 .woocommerce-info {
     background-color: #DB343A;
 } */
+
+.woocommerce-checkout-payment .woocommerce-info {
+    background-color: #DB343A;
+}
