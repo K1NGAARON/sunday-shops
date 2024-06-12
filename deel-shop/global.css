@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-                
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+         
 :root {
-    --primary: #091f40;
+    --primary: #000000;
+    --purple: #5938B7;
     --orange: #fd6900;
     --white: #ffffff;
     --black: #000000;
 	--banner: #3B4448;
-    --fontFamily: 'Poppins', sans-serif;
+    --fontFamily: 'Inter', sans-serif;
     --transition: all .25s ease-in-out
 }
 
@@ -99,7 +100,7 @@ li::marker {
 .primary-navigation li > a,
 .primary-navigation li.current-menu-item > a,
 .primary-navigation > li.current-menu-parent > a {
-    color: var(--orange);
+    color: var(--black);
     font-weight: 700;
 }
 
@@ -107,17 +108,17 @@ li::marker {
 .site-tools .tools-icon .woostify-svg-icon,
 .woocommerce-mini-cart__total .amount,
 .primary-navigation a:hover {
-    color: var(--orange);
+    color: var(--black);
 }
 
 .shop-cart-count {
-    background-color: var(--orange);
+    background-color: var(--black);
     color: var(--white);
 }
 
 .cart-sidebar-head .shop-cart-count,
 .shop-cart-count {
-    background-color: var(--orange);
+    background-color: var(--black);
 }
 
 /* BUTTONS */
@@ -160,6 +161,10 @@ li::marker {
 
 .woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item).selected {
     border: 2px solid var(--primary);
+}
+
+.woocommerce-tabs {
+	display: none!important;
 }
 
 .woocommerce-tabs .woocommerce-Tabs-panel p:last-child {
@@ -653,3 +658,24 @@ p {
 .bundle_error {
 	display: none!important;
 }
+
+.woocommerce-LoopProduct-link.woocommerce-loop-product__link:hover {
+    color: var(--purple);
+}
+
+.button.add_to_cart_button,
+.button.add_to_cart_button:hover {
+    color: var(--purple);
+}
+
+.cart-sidebar-content .woocommerce-mini-cart__buttons a:not(.checkout):hover {
+    color: var(--purple);
+}
+
+.wc-block-cart__submit-container .wc-block-components-button__text:hover {
+    color: var(--purple);
+}
+/* 
+.woocommerce-info {
+    background-color: #DB343A;
+} */
