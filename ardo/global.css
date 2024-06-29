@@ -9,22 +9,6 @@
     --transition: all .25s ease-in-out
 }
 
-/* .product-summary .summary.entry-summary .price {
-    display: none;
-} */
-
-/* .product-loop-wrapper .product-loop-meta .animated-meta .price {
-    display: none;
-}
-
-.woocommerce-product-details__short-description {
-    padding: 0;
-}
-
-.site-tools .tools-icon.header-search-icon {
-    display: none;
-} */
-
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--downloads,
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--edit-address,
 .u-column1.col-1.woocommerce-Address {
