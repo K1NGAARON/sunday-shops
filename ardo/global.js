@@ -17,8 +17,29 @@ $('.accordion-item').click(function () {
     $(this).children('.accordion-head').children('.icon').children('i').addClass('fa-minus');
 });
 
+function addPriceIcon(e) {
+    const priceTargets = document.querySelectorAll('.price');
+
+    if (!priceTargets) {
+        return;
+    } else {
+        priceTargets.forEach(priceTarget => {
+            const spanElement = document.createElement('span');
+            spanElement.className = 'woocommerce-Price-amount amount';
+
+            const textNode = document.createTextNode('Ardo Coins');
+            spanElement.appendChild(textNode);
+            priceTarget.appendChild(spanElement);
+        });
+    };
+};
+
+$(document).ready(function() {
+	addPriceIcon()
+});
+
 const oneSizeProductsURL = [
-    'https://friends-of-delaware.shop.teamsunday.com/product/delaware-gift/'
+    'https://ardo.shop.teamsunday.com/product/socks/'
 ];
 
 function sizeChartText(e) {
