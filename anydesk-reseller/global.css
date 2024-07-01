@@ -11,6 +11,11 @@
     --e-global-typography-primary-font-weight: 400;
 }
 
+.woocommerce .woocommerce-form-coupon-toggle {
+    font-size: 18px;
+    background-color: var(--primary);
+}
+
 .product-nav-item-inner .product-nav-item-price {
 	display: none;
 }
@@ -678,10 +683,6 @@ table .product-subtotal {
 .woocommerce-checkout-review-order-table .cart-subtotal,
 .woocommerce-checkout-review-order-table .order-total {
 	display: none;
-}
-
-.bundle_availability {
-	/* display: none!important; */
 }
 
 .in-stock {
