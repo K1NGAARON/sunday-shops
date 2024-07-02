@@ -20,6 +20,14 @@
 	display: none;
 }
 
+.woostify-single-product-stock.stock {
+	display: none;
+}
+
+.product-summary .product_meta {
+	display: none;
+}
+
 * {
     font-family: var(--fontFamily);
 }
