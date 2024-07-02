@@ -635,3 +635,28 @@ p {
     border-radius: 32px;
     background-color: var(--white);
 }
+
+.elementor-section .elementor-container .elementor-element.ghost-btn .elementor-button {
+    color: var(--black);
+    background-color: transparent;
+    border: 1px solid var(--black);
+    transition: var(--transition);
+}
+
+.elementor-section .elementor-container .elementor-element.ghost-btn .elementor-button:hover {
+    color: var(--white);
+    background-color: var(--black);
+    transition: var(--transition);
+}
+
+.product-loop-meta:not(.no-transform) {
+    /* overflow: unset; */
+    min-height: fit-content;
+    height: fit-content;
+}
+
+.product-loop-meta:not(.no-transform) .button,
+.product-loop-meta:not(.no-transform) .button:hover {
+    color: var(--black);
+    background-color: var(--primary);
+}
