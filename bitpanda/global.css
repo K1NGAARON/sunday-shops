@@ -660,3 +660,7 @@ p {
     color: var(--black);
     background-color: var(--primary);
 }
+
+.woocommerce-loop-product__title a:hover {
+    color: var(--primary);
+}
