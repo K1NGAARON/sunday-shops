@@ -9,37 +9,17 @@
     --transition: all .25s ease-in-out
 }
 
-.woocommerce-checkout-review-order-table .cart-subtotal,
-.woocommerce-checkout-review-order-table .order-total,
 .site-tools .tools-icon.header-search-icon,
-.product-nav-item-inner .product-nav-item-price,
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--downloads,
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--edit-address,
 .u-column1.col-1.woocommerce-Address,
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--edit-address,
-table .product-price,
-table .product-subtotal,
 #secondary,
-.product-summary .price,
-.woocommerce-mini-cart__total.total,
-.mini-cart-product-price,
 .woocommerce-additional-fields,
 #tab-title-additional_information  {
 	display: none;
 }
 
-.cart_item .product-total,
-table .product-total,
-.single_variation,
-.reset_variations,
-.sku_wrapper,
-.woostify-single-product-stock.stock,
-.site-footer,
-.woocommerce-checkout-review-order .shop_table.woocommerce-checkout-review-order-table,
-.woocommerce-checkout-review-order .shop_table.woocommerce-checkout-review-order-table .cart_item .product-total {
-	display: none!important;
-}
-                                  
 * {
     font-family: var(--fontFamily);
 }
@@ -63,7 +43,7 @@ li::marker {
 
 /* HEADER */
 #masthead {
-    background-color: var(--primary);
+    background-color: var(--black);
     padding: 10px 0;
 }
 
@@ -74,7 +54,7 @@ li::marker {
 
 #masthead .custom-logo {
     width: 100%;
-    max-width: 100px;
+    max-width: 150px;
 }
 
 .primary-navigation li > a {
@@ -163,6 +143,20 @@ a,
 li,
 p {
     font-family: var(--fontFamily);
+}
+
+footer {
+	display: none;
+}
+
+.topbar {
+	font-weight: 700;
+	padding: 10px;
+	background-color: var(--primary);
+}
+
+.woocommerce .woocommerce-form-coupon-toggle {
+	background-color: var(--primary);
 }
 
 /* CHECKOUT */
