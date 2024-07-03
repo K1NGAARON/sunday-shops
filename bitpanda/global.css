@@ -726,4 +726,8 @@ p {
     .elementor-section .elementor-element h2 {
         font-size: 26px;
     }
+
+    .woocommerce ul.products li.product {
+        padding: 30px;
+    }
 }
