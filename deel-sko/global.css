@@ -686,3 +686,12 @@ p {
 .woocommerce-checkout-payment .woocommerce-info {
     background-color: #DB343A;
 }
+
+.elementor-element.label p {
+    background-color: var(--primary);
+    width: fit-content;
+    padding: 8px 32px;
+    border-radius: 32px;
+    font-weight: 700;
+    margin: 0;
+}
