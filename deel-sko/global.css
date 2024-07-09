@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
          
 :root {
     --primary: #075055;
@@ -145,7 +145,7 @@ body {
 [class*="elementor-kit"] .checkout-button,
 .woocommerce-cart-form__contents:not(.elementor-menu-cart__products) .actions .coupon [name="apply_coupon"] {
     background-color: var(--primary);
-    font-weight: 500;   
+    font-weight: 700;   
 }
 
 .elementor-section .elementor-container .elementor-element .elementor-button:hover {
