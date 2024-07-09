@@ -8,13 +8,13 @@ $('.accordion-item').click(function () {
     closeAccordion();
 
     let head = $(this).children('.accordion-head');
-    let icon = head.children('.icon');
-    let iconChild = icon.children('i');
+    let iconWrapper = head.children('.icon');
+    let icon = iconWrapper.children('i');
 
     head.toggleClass('active');
     head.siblings('.accordion-body').toggleClass('active');
-    icon.toggleClass('active');
-    iconChild.removeClass('fa-plus').addClass('fa-minus');
+    iconWrapper.toggleClass('active');
+    icon.removeClass('fa-plus').addClass('fa-minus');
 });
 
 const oneSizeProductsURL = [];
