@@ -55,6 +55,15 @@ body {
     opacity: 1;
 }
 
+.topbar {
+    background-color: var(--primary);
+    padding: 10px;
+}
+
+.topbar .topbar-item {
+    font-weight: 700;
+}
+
 .product-nav-item-inner .product-nav-item-price,
 .bundled_product_title_link,
 .site-tools .tools-icon.header-search-icon,
@@ -166,12 +175,12 @@ body {
     border: 2px solid var(--primary);
 }
 
-.woocommerce-tabs {
-	display: none!important;
-}
-
 .woocommerce-tabs .woocommerce-Tabs-panel p:last-child {
     text-align: center!important;
+}
+
+.woocommerce-tabs .tabs .description_tab a {
+    color: var(--white);
 }
 
 /* CHECKOUT */
@@ -223,7 +232,7 @@ body {
 .sizechart th {
     background-color: var(--black);
     color: var(--white);
-    border-color: var(--black);
+    border-color: var(--white);
     font-weight: 700;
 }
 
@@ -518,12 +527,16 @@ body {
 .sizechart th {
     background-color: var(--black);
     color: var(--white);
-    border-color: var(--black);
+    border-color: var(--white);
     font-weight: 700;
 }
 .sizechart th,
 .sizechart td {
     font-size: 12px;
+}
+
+#product-3351 {
+    background-color: var(--white);
 }
 
 #tab-title-additional_information {
