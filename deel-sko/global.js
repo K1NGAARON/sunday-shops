@@ -47,6 +47,16 @@ $(document).ready(function() {
     sizeChartText();
 });
 
+function addTextToCheckout() {
+    if (window.location.href.indexOf("/checkout/order-received/") > -1) {
+        $('.woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received').text("We expect to ship out the Varsity Jackets December 2024.");
+    }
+};
+
+$(document).ready(function() {
+    addTextToCheckout()
+});
+
 $(document).ready(function() {
     const variationsElement = document.querySelector('.woocommerce-product-details__short-description');
 
@@ -110,6 +120,7 @@ $(document).ready(function() {
             }
         });
 
+        // Modal functions 
         openSizer.addEventListener('click', showPopUp);
         span.addEventListener('click', hidePopUp);
     })

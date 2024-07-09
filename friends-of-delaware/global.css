@@ -9,20 +9,26 @@
     --transition: all .25s ease-in-out
 }
 
-.product-summary .summary.entry-summary .price {
-    display: none;
-}
-
-.product-loop-wrapper .product-loop-meta .animated-meta .price {
+.product-summary .summary.entry-summary .price,
+.product-loop-wrapper .product-loop-meta .animated-meta .price,
+.site-tools .tools-icon.header-search-icon,
+.woocommerce-checkout-review-order-table .product-total,
+.woocommerce-checkout-review-order-table .cart-subtotal,
+.woocommerce-checkout-review-order-table .cart-discount,
+.woocommerce-checkout-review-order-table .order-total,
+.woocommerce-checkout-review-order-table .cart-subtotal,
+.woocommerce-checkout-review-order-table .cart-discount,
+.woocommerce-checkout-review-order-table .order-total,
+.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--downloads,
+.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--edit-address,
+.u-column1.col-1.woocommerce-Address,
+table .product-price,
+table .product-subtotal {
     display: none;
 }
 
 .woocommerce-product-details__short-description {
     padding: 0;
-}
-
-.site-tools .tools-icon.header-search-icon {
-    display: none;
 }
 
 .menu-item {
@@ -37,37 +43,6 @@
 
 .menu-item.current-menu-item {
     opacity: 1;
-}
-
-.woocommerce-checkout-review-order-table .product-total {
-    display: none;
-}
-
-.woocommerce-checkout-review-order-table .cart-subtotal {
-    display: none;
-}
-
-.woocommerce-checkout-review-order-table .cart-discount {
-    display: none;
-}
-
-.woocommerce-checkout-review-order-table .order-total {
-    display: none;
-}
-
-.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--downloads,
-.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--edit-address,
-.u-column1.col-1.woocommerce-Address {
-    display: none;
-}
-
-.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--edit-address {
-    display: none;
-}
-
-table .product-price,
-table .product-subtotal {
-	display: none;
 }
 
 #secondary {
@@ -328,8 +303,6 @@ p {
     width: 100%;
 }
 
-
-
 .cart-sidebar-content .woocommerce-mini-cart__buttons a.checkout,
 .woocommerce-cart-form__contents:not(.elementor-menu-cart__products) .actions .coupon [name="apply_coupon"],
 [class*="elementor-kit"] .checkout-button,
@@ -359,7 +332,6 @@ p {
     height: auto;
     max-width: 600px;
 }
-
 
 .faq .wrapper {
   width: 80%;
