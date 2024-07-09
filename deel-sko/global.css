@@ -28,6 +28,20 @@ body {
     background-color: var(--black-background);
 }
 
+.menu-item {
+    opacity: 0.6;
+    transition: var(--transition);
+}
+
+.menu-item:hover {
+    opacity: 1;
+    transition: var(--transition);
+}
+
+.menu-item.current-menu-item {
+    opacity: 1;
+}
+
 .product-nav-item-inner .product-nav-item-price {
 	display: none;
 }
