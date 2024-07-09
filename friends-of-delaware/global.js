@@ -49,6 +49,19 @@ $(document).ready(function() {
     sizeChartText();
 });
 
+function addTextToCheckout() {
+    if (window.location.href.indexOf("/checkout-2/order-received/") > -1) {
+        $('.woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received').text("Your gift is on its way!");
+       
+        // let successNotice = $(".woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received");
+        // successNotice.after("<p class='track-trace'>You will receive a track & trace once your order is shipped.</p>");
+    }
+};
+
+$(document).ready(function() {
+    addTextToCheckout()
+});
+
 $(document).ready(function() {
     const variationsElement = document.querySelector('.woocommerce-product-details__short-description');
 

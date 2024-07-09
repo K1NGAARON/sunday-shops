@@ -9,11 +9,11 @@
     --transition: all .25s ease-in-out
 }
 
-/* .product-summary .summary.entry-summary .price {
+.product-summary .summary.entry-summary .price {
     display: none;
-} */
+}
 
-/* .product-loop-wrapper .product-loop-meta .animated-meta .price {
+.product-loop-wrapper .product-loop-meta .animated-meta .price {
     display: none;
 }
 
@@ -23,7 +23,37 @@
 
 .site-tools .tools-icon.header-search-icon {
     display: none;
-} */
+}
+
+.menu-item {
+    opacity: 0.6;
+    transition: var(--transition);
+}
+
+.menu-item:hover {
+    opacity: 1;
+    transition: var(--transition);
+}
+
+.menu-item.current-menu-item {
+    opacity: 1;
+}
+
+.woocommerce-checkout-review-order-table .product-total {
+    display: none;
+}
+
+.woocommerce-checkout-review-order-table .cart-subtotal {
+    display: none;
+}
+
+.woocommerce-checkout-review-order-table .cart-discount {
+    display: none;
+}
+
+.woocommerce-checkout-review-order-table .order-total {
+    display: none;
+}
 
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--downloads,
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--edit-address,
@@ -308,7 +338,7 @@ p {
 }
  
 .woocommerce-form-coupon-toggle {
-    background-color: #3F84C5;
+    background-color: var(--primary);
     padding: 10px 20px;
     color: var(--white);
     border-radius: 9px;
