@@ -28,21 +28,10 @@ table .product-subtotal,
 	display: none;
 }
 
-/* .cart_item .product-total,
-table .product-total,
 .single_variation,
 .reset_variations,
 .sku_wrapper,
-.woostify-single-product-stock.stock,
-.site-footer {
-	display: none!important;
-} */
-
-.single_variation,
-.reset_variations,
-.sku_wrapper,
-.woostify-single-product-stock.stock,
-.site-footer {
+.woostify-single-product-stock.stock {
 	display: none!important;
 }
                                                 
@@ -672,4 +661,10 @@ a.primary-color,
 
 #mollie-notice {
     display: none;
+}
+
+@media (max-width: 560px) {
+	.hide-bg {
+		background-image: none!important;
+	}
 }
