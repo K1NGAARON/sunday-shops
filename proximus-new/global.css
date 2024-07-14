@@ -158,13 +158,13 @@ a.primary-color,
 #secondary .widget a.button, 
 [class*="elementor-kit"] .checkout-button,
 .woocommerce-cart-form__contents:not(.elementor-menu-cart__products) .actions .coupon [name="apply_coupon"],
-.wp-element-button.wc-block-cart__submit-button,
-.wc-block-checkout__form button {
+.wp-element-button.wc-block-cart__submit-button {
     color: var(--primary);
 	background-color: transparent;
-	border: 2px solid var(--primary);
+	border: .2rem solid var(--primary);
     font-weight: 700;
-	border-radius: var(--btn-border-radius) var(--btn-border-radius) var(--btn-border-radius-big) var(--btn-border-radius)!important;
+    padding: 1.1rem 2rem;
+	border-radius: var(--btn-border-radius) var(--btn-border-radius) var(--btn-border-radius-big) var(--btn-border-radius);
     transition: var(--transition);
 }
 
