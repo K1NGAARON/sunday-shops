@@ -158,8 +158,9 @@ a.primary-color,
 .wp-element-button.wc-block-cart__submit-button {
     color: var(--primary);
 	background-color: transparent;
-	border: 2px solid var(--primary);
+	border: .2rem solid var(--primary);
     font-weight: 700;
+    padding: 1.1rem 2rem;
 	border-radius: var(--btn-border-radius) var(--btn-border-radius) var(--btn-border-radius-big) var(--btn-border-radius);
     transition: var(--transition);
 }

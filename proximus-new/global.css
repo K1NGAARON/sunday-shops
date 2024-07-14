@@ -34,6 +34,11 @@ table .product-subtotal,
 .woostify-single-product-stock.stock {
 	display: none!important;
 }
+
+.site-footer {
+    padding: 10px;
+    background-color: var(--black);
+}
                                                 
 * {
     font-family: var(--fontFamily);
@@ -50,6 +55,11 @@ a,
 li,
 p {
     font-family: var(--fontFamily);
+}
+
+strong,
+b {
+    color: var(--black)!important;
 }
 
 p,
@@ -154,7 +164,7 @@ a.primary-color,
 	background-color: transparent;
 	border: 2px solid var(--primary);
     font-weight: 700;
-	border-radius: var(--btn-border-radius) var(--btn-border-radius) var(--btn-border-radius-big) var(--btn-border-radius);
+	border-radius: var(--btn-border-radius) var(--btn-border-radius) var(--btn-border-radius-big) var(--btn-border-radius)!important;
     transition: var(--transition);
 }
 
