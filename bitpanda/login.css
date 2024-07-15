@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+                
+:root {
+    --primary: #2cec9a;
+    --white: #ffffff;
+    --black: #000000;
+	--banner: #3B4448;
+    --border-radius: 18px;
+    --fontFamily: 'Inter', sans-serif;
+    --transition: all .25s ease-in-out
+}
+
+* {
+    font-family: var(--fontFamily);
+}
+
+.woocommerce-form.woocommerce-form-login .woocommerce-form-login__submit {
+    font-family: var(--fontFamily);
+}

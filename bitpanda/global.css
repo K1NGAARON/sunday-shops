@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
                 
 :root {
     --primary: #2cec9a;
@@ -21,10 +21,22 @@ h3 {
     font-weight: 700;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fontFamily);
+}
+
 a,
 li,
 p {
     font-family: var(--fontFamily);
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+.cart-sidebar-content .woocommerce-mini-cart__buttons a:not(.checkout):hover {
+    color: var(--primary);
 }
 
 select,
@@ -64,6 +76,10 @@ option {
 
 .menu-item.current-menu-item {
     opacity: 1;
+}
+
+.menu-item .menu-item-text {
+    line-height: 32px;
 }
 
 p,
@@ -228,6 +244,10 @@ li::marker {
     text-transform: uppercase;
 }
 
+.wc-block-cart-item__prices .woocommerce-Price-amount.amount {
+    margin-left: 5px;
+}
+
 /* SIZECHARTS */
 .woocommerce-tabs .woocommerce-Tabs-panel {
     max-width: none;
@@ -388,6 +408,10 @@ li::marker {
 	text-decoration: underline;
 }
 
+.woostify-product-navigation  {
+    display: none;
+}
+
 .animated-meta .price {
 	justify-content: center;
 }
@@ -411,6 +435,7 @@ li::marker {
     top: 0;
     width: 100%;
     height: 100%;
+    padding: 0 20px;
     overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
@@ -440,7 +465,8 @@ li::marker {
 }
 
 .modal h5 {
-    font-size: 28px;
+    font-family: var(--fontFamily);
+    font-size: 24px;
     margin-bottom: 20px;
 }
   
@@ -514,6 +540,12 @@ li::marker {
     color: var(--primary);
     font-weight: 20px;
     font-weight: 700;
+}
+
+@media (max-width: 560px) {
+    .modal-content {
+        width: 100%;
+    }
 }
 
 /* SIZECHART CSS */
@@ -681,6 +713,7 @@ li::marker {
     left: 0;
     background-color: var(--white);
     transform: scaleX(0);
+    transform-origin: left;
     transition: transform 0.3s ease;
 }
 
