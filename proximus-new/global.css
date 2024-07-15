@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); */
                 
 :root {
     --primary: #5C2D91;
@@ -6,7 +6,7 @@
     --white: #ffffff;
     --black: #000000;
 	--banner: #3B4448;
-    --fontFamily: 'Poppins', sans-serif;
+    --fontFamily: 'Proximus', sans-serif;
 	--btn-border-radius: 0.3rem;
 	--btn-border-radius-big: 2.5rem;
     --transition: all .25s ease-in-out
@@ -48,7 +48,7 @@ h1,
 h2,
 h3 {
     font-family: var(--fontFamily);
-    font-weight: 700;
+    font-weight: 300;
 }
 
 a,
@@ -59,6 +59,7 @@ p {
 
 strong,
 b {
+    font-family: var(--fontFamily);
     color: var(--black)!important;
 }
 
@@ -76,7 +77,7 @@ li::marker {
 	font-size: 36px;
 	line-height: 1.2;
 	color: var(--primary);
-	font-weight: 400;
+	font-weight: 300;
 }
 
 .primary-color,
@@ -107,7 +108,7 @@ a.primary-color,
 }
 
 #masthead .primary-navigation li.current-menu-item > a {
-	font-weight: 700;
+	font-weight: 300;
 }
 
 #masthead .custom-logo {
