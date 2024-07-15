@@ -18,8 +18,6 @@ $('.accordion-item').click(function () {
     }
 });
 
-
-
 function addPriceIcon(e) {
     const priceTargets = document.querySelectorAll('.price');
 
