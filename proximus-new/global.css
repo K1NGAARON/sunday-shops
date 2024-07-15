@@ -159,7 +159,8 @@ a.primary-color,
 #secondary .widget a.button, 
 [class*="elementor-kit"] .checkout-button,
 .woocommerce-cart-form__contents:not(.elementor-menu-cart__products) .actions .coupon [name="apply_coupon"],
-.wp-element-button.wc-block-cart__submit-button {
+.wp-element-button.wc-block-cart__submit-button,
+.wc-block-components-checkout-place-order-button {
     color: var(--primary);
 	background-color: transparent;
 	border: .2rem solid var(--primary);
@@ -199,7 +200,8 @@ a.primary-color,
 }
 
 .elementor-section .elementor-container .elementor-element .elementor-button:hover,
-.wp-element-button.wc-block-cart__submit-button:hover {
+.wp-element-button.wc-block-cart__submit-button:hover,
+.wc-block-components-checkout-place-order-button:hover {
     background-color: var(--primary);
 	color: var(--white);
     transition: var(--transition);
