@@ -27,6 +27,12 @@ p {
     font-family: var(--fontFamily);
 }
 
+select,
+input,
+option {
+    font-family: var(--fontFamily);
+}
+
 .product-nav-item-inner .product-nav-item-price,
 .site-tools .tools-icon.header-search-icon,
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--downloads,
@@ -624,16 +630,19 @@ li::marker {
     color: var(--black);
 }
 
-.woocommerce .product .woocommerce-loop-product__title {
+.woocommerce .product .woocommerce-loop-product__title,
+.product-summary .product_title {
     color: var(--black);
     font-size: 24px;
     font-weight: 700;
 }
 
 .woocommerce .product .product-loop-meta .price .woocommerce-Price-amount, 
-.woocommerce .product .product-loop-meta .price del {
+.woocommerce .product .product-loop-meta .price del,
+.product-summary .price {
     color: var(--black);
     font-weight: 700;
+    font-size: 14px;
 }
 
 .products .product:hover .product-loop-meta:not(.no-transform) .animated-meta {
@@ -650,7 +659,7 @@ li::marker {
 }
 
 .products .product .product-loop-meta:not(.no-transform) .add_to_cart_button:hover {
-    transform: scale(1.15);
+    transform: scale(1.05);
     transition: var(--transition); 
 }
 
@@ -658,17 +667,11 @@ li::marker {
     display: none;
 }
 
-.menu-item-text,
-.woocommerce-loop-product__title {
+.menu-item-text {
     position: relative;
 }
 
-.woocommerce-loop-product__title {
-    line-height: 50px;
-}
-
-.menu-item-text::before,
-.woocommerce-loop-product__title .woocommerce-loop-product__link::before {
+.menu-item-text::before {
     content: "";
     position: absolute;
     display: block;
@@ -685,10 +688,6 @@ li::marker {
     background-color: var(--white);
 }
 
-.woocommerce-loop-product__title .woocommerce-loop-product__link::before {
-    background-color: var(--black);
-}
-
 .menu-item.current-menu-item .menu-item-text::before {
     transform: scaleX(1);
 }
@@ -697,8 +696,18 @@ li::marker {
     transform: scaleX(1);
 }
 
-.woocommerce-loop-product__title .woocommerce-loop-product__link:hover::before {
-    transform: scaleX(1);
+.woocommerce-loop-product__title {
+    transition: var(--transition);
+}
+
+.woocommerce-loop-product__title:hover {
+    transform: scale(1.05);
+    opacity: 0.6;
+    transition: var(--transition);
+}
+
+.woostify-sorting .filter {
+    display: none!important;
 }
 
 @media (max-width: 600px) {
