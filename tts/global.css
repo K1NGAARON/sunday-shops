@@ -1,0 +1,71 @@
+:root {
+	--white-color: #ffffff;
+	--primary-color: #D6AD61;
+	--gold-color: #FAA61A;
+	--green-color: #4CAF50;
+	--header-color: #45283B;
+	--border-radius: 5px;
+}
+
+header .wd-nav[class*=wd-style-] > li > .woodmart-nav-link {
+	color: var(--primary-color);
+}
+
+.newsletter-form .wpcf7-submit {
+	color: var(--white-color);
+	background-color: var(--primary-color);
+	border-radius: var(--border-radius);
+}
+
+.rating .fa-star {
+	color: var(--gold-color);
+}
+
+.check .fa-circle-check,
+.check {
+	color: var(--green-color);
+}
+
+.elementor-element .atc-price .price .amount,
+.elementor-element .atc-price .price p {
+	font-size: 32px;
+}
+
+.list-checks {
+	list-style: none;
+	padding-inline-start: 0;
+}
+
+.list-checks .fa-circle-check {
+	color: var(--primary-color);
+}
+
+.fa-fire {
+	color: var(--primary-color);
+}
+
+img.payment-method {
+	width: 250px;
+	height: auto;
+}
+
+.flexbox {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	align-content: center;
+}
+
+.flexbox .item {
+	display: flex;
+	flex: unset;
+	gap: 5px;
+}
+
+.flexbox .item p {
+	margin-bottom: 0;
+}
+
+.wd-tools-element > a {
+	color: var(--primary-color);
+}
