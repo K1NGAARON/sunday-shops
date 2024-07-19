@@ -94,14 +94,8 @@ table .product-subtotal,
 	display: none;
 }
 
-#tab-title-additional_information,
-.woocommerce-additional-fields {
-    /* display: none; */
-}
-
 .animated-meta .price,
 .product-summary .price {
-	/* display: none; */
 	gap: 5px;
 }
 
