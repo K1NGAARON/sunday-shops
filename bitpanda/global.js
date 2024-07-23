@@ -39,7 +39,10 @@ $(document).ready(function() {
 	addPriceIcon()
 })
 
-const oneSizeProductsURL = [];
+const oneSizeProductsURL = [
+    'https://bitpanda.teamsunday.com/product/bitpanda-towel/',
+    'https://bitpanda.teamsunday.com/product/bitpanda-sunglasses/'
+];
 
 function sizeChartText(e) {
     function hideOneSizeTable() {
@@ -78,16 +81,6 @@ $(document).ready(function() {
 
         if (oneSizeProductsURL.includes(currentURL)) {
             return;
-            /*
-                CHECK THIS THING
-            */
-            const anchorElement = `
-                <div class="sizer-holder">
-                    <a id="openSizer">Calculate Size</a>
-                </div>
-            `;
-            variationsElement.insertAdjacentHTML('beforeend', anchorElement);
-
         } else {
             const anchorElement = `
                 <div class="sizer-holder">
@@ -120,6 +113,7 @@ $(document).ready(function() {
     waitForElementToExist('openSizer', function(e) {
         const modal = document.querySelector('#myModal');
         const openSizer = document.querySelector('#openSizer');
+        const addToCartButton = document.querySelector('.single_add_to_cart_button');
 
         function showPopUp(e) {
             modal.style.display = "block";
@@ -145,6 +139,7 @@ $(document).ready(function() {
 
         // Modal functions 
         openSizer.addEventListener('click', showPopUp);
+        addToCartButton.addEventListener('click', showPopUp);
         span.addEventListener('click', hidePopUp);
     })
 });
