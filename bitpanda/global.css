@@ -45,6 +45,17 @@ option {
     font-family: var(--fontFamily);
 }
 
+.topbar {
+	font-weight: 700;
+	color: var(--black);
+	background-color: var(--white);
+	padding: 10px;
+}
+
+.topbar * {
+	color: var(--black);
+}
+
 .product-nav-item-inner .product-nav-item-price,
 .site-tools .tools-icon.header-search-icon,
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--downloads,
@@ -741,6 +752,39 @@ li::marker {
 
 .woostify-sorting .filter {
     display: none!important;
+}
+
+.woocommerce-product-details__short-description {
+	padding: 0;
+}
+
+/* MY ACCOUNT */
+.mycred-my-balance-wrapper {
+    color: var(--black);
+}
+
+.mycred-my-balance-wrapper div {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.mycred-my-balance-wrapper div p {
+    font-weight: 700;
+}
+
+.woocommerce-MyAccount-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.woocommerce-account .u-column2 {
+    width: 100%;
+    max-width: none;
+}
+
+.woocommerce-Address .woocommerce-Address-title h3 {
+    text-transform: uppercase;
 }
 
 @media (max-width: 600px) {
