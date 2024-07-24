@@ -70,7 +70,6 @@ option {
 .single_variation,
 .reset_variations,
 .sku_wrapper,
-.woostify-single-product-stock.stock,
 .site-footer {
     display: none!important;
 }
@@ -803,4 +802,10 @@ li::marker {
     .woocommerce ul.products li.product {
         padding: 0 30px;
     }
+}
+
+.woostify-single-product-stock .woostify-single-product-stock-label {
+    color: var(--black);
+    font-weight: 700;
+    margin-top: 20px;
 }
