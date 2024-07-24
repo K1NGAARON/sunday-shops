@@ -35,8 +35,20 @@ function addPriceIcon(e) {
     };
 };
 
+function accountBalance(e) {
+    const balanceTarget = $('.mycred-my-balance-wrapper div');
+    const html = `
+        <p>
+            Balance: 
+        </p>
+    `;
+
+    balanceTarget.prepend(html);
+};
+
 $(document).ready(function() {
-	addPriceIcon()
+	addPriceIcon();
+	accountBalance();
 })
 
 const oneSizeProductsURL = [
