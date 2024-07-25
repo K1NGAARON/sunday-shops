@@ -1,6 +1,7 @@
 :root {
 	--white-color: #ffffff;
-	--primary-color: #D6AD61;
+	--primary-color: #D9BA5E;
+	--purple-color: #14142A;
 	--gold-color: #FAA61A;
 	--green-color: #4CAF50;
 	--header-color: #45283B;
@@ -28,7 +29,7 @@ header .wd-nav[class*=wd-style-] > li > .woodmart-nav-link {
 
 .elementor-element .atc-price .price .amount,
 .elementor-element .atc-price .price p {
-	font-size: 32px;
+	font-size: 24px;
 }
 
 .list-checks {
@@ -68,4 +69,71 @@ img.payment-method {
 
 .wd-tools-element > a {
 	color: var(--primary-color);
+}
+
+.site-content {
+	padding: 0;
+}
+
+.whb-color-dark:not(.whb-with-bg) {
+	background-color: transparent;
+}
+
+.whb-sticky-shadow.whb-sticked .whb-main-header {
+	backdrop-filter: blur(42px);
+}
+
+.inline-form form {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+.inline-form form p {
+	margin-bottom: 0;
+}
+
+.inline-form form input[type="submit"] {
+	color: var(--white-color);
+	background-color: var(--primary-color);
+	border-radius: 5px;
+}
+
+.wd-posts {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.single-post .main-page-wrapper {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.wd-tools-element:hover > a {
+	color: var(--primary-color);
+}
+
+.product-wrapper .product-element .wd-fill {
+	background-color: var(--purple-color);
+	border-radius: 15px;
+}
+
+.wd-carousel-wrap .wd-product .product-wrapper .product-element .wd-fill .wd-add-btn .add_to_cart_button {
+	background-color: var(--primary-color)!important;
+	border-color: var(--primary-color)!important;
+	border-radius: 15px;
+}
+
+.contact-form-wrapper ._form-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+}
+
+.contact-form-wrapper ._form-content ._submit {
+	color: var(--white-color);
+	background-color: var(--primary-color);
+	border-radius: 15px;
 }
