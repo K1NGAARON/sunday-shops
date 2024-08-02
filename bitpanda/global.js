@@ -46,14 +46,61 @@ function accountBalance(e) {
     balanceTarget.prepend(html);
 };
 
+function addNotificationToCheckout() {
+    const checkoutUrl = [
+        'https://bitpanda.teamsunday.com/checkout/'
+    ];
+
+    const currentURL = window.location.href;
+
+    if (checkoutUrl.includes(currentURL)) {
+        const target = $('.checkout.woocommerce-checkout');
+        const notification = `
+            <div class="checkout-notification">
+                <p>
+                    Did you fill in your correct size?
+                </p>
+            </div>
+        `;
+
+        target.prepend(notification);
+    }
+};
+
+function addTextToClassicRange() {
+    const checkoutUrl = [
+        'https://bitpanda.teamsunday.com/product-category/classic-range/'
+    ];
+
+    const currentURL = window.location.href;
+
+    if (checkoutUrl.includes(currentURL)) {
+        const target = $('.woostify-sorting');
+        const notification = `
+            <div class="category-intro">
+                <p>
+                    Did you always love your original Bitpanda merch but couldn't get more? Now's your chance with the classic range, restocking your favourite items. 
+                    <br>
+                    This Classic Range from our onboarding essentials has its own sizing information and limited quantities, so get there quick. 
+                </p>
+            </div>
+        `;
+
+        target.prepend(notification);
+    }
+};
+
 $(document).ready(function() {
 	addPriceIcon();
 	accountBalance();
+    addNotificationToCheckout();
+    addTextToClassicRange();
 })
 
 const oneSizeProductsURL = [
     'https://bitpanda.teamsunday.com/product/bitpanda-towel/',
-    'https://bitpanda.teamsunday.com/product/bitpanda-sunglasses/'
+    'https://bitpanda.teamsunday.com/product/bitpanda-sunglasses/',
+	'https://bitpanda.teamsunday.com/product/bitpanda-socks/'
 ];
 
 function sizeChartText(e) {
@@ -151,7 +198,7 @@ $(document).ready(function() {
 
         // Modal functions 
         openSizer.addEventListener('click', showPopUp);
-        addToCartButton.addEventListener('click', showPopUp);
+        // addToCartButton.addEventListener('click', showPopUp);
         span.addEventListener('click', hidePopUp);
     })
 });
