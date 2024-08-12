@@ -144,3 +144,22 @@ img.payment-method {
 	background-color: var(--primary-color);
 	border-radius: 15px;
 }
+
+.main-page-wrapper .site-content {
+	margin-bottom: 0;
+}
+
+.reviews-wrapper .elementor-main-swiper .swiper-slide {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.reviews-wrapper .elementor-testimonial {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
