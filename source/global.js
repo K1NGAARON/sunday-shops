@@ -124,7 +124,6 @@ $(document).ready(function() {
             }
         });
 
-        // Modal functions 
         openSizer.addEventListener('click', showPopUp);
         span.addEventListener('click', hidePopUp);
     })
