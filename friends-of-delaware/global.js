@@ -45,14 +45,23 @@ function sizeChartText(e) {
     checkAndHideOneSizeTable();
 }
 
+function replaceErrorText(e) {
+    const errorMSG = document.querySelector('.wc_payment_methods .woocommerce-info');
+	
+    if (errorMSG) {
+        errorMSG.innerText = "Please fill in your coupon code.";
+        
+    } else {
+        return;
+    }
+};
+
+
+
 function addTextToCheckout() {
     if (window.location.href.indexOf("/checkout-2/order-received/") > -1) {
         $('.woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received').text("Your gift is on its way!");
     }
-};
-
-function changeMiniCartCheckout() {
-    $('.woocommerce-mini-cart__buttons .checkout').text("Confirm your recipient information");
 };
 
 $(document).ready(function() {
@@ -125,6 +134,9 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     sizeChartText();
-    changeMiniCartCheckout();
     addTextToCheckout();
+
+    setTimeout(function () {
+        replaceErrorText();
+    }, 1000);
 });
