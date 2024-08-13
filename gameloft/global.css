@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
                 
 :root {
-    --primary: #ff2b23;
+    --primary: #c800ff;
 	--green: #006A52;
     --white: #ffffff;
     --black: #000000;
@@ -177,8 +177,6 @@ li::marker {
 .woocommerce-tabs .woocommerce-Tabs-panel p:last-child {
     text-align: center!important;
 }
-
-
 
 /* FONTS */
 h1,
@@ -681,4 +679,11 @@ header .btn a {
 
 header .btn a span {
     color: var(--white);
+}
+
+.topbar {
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--primary);
+    padding: 10px;
 }
