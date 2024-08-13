@@ -6,7 +6,7 @@
 	--gold-color: #FAA61A;
 	--green-color: #4CAF50;
 	--header-color: #45283B;
-	--border-radius: 10px;
+	--border-radius-custom: 10px;
 	--transition: all .25s ease-in-out;
 }
 
@@ -17,7 +17,7 @@ header .wd-nav[class*=wd-style-] > li > .woodmart-nav-link {
 .newsletter-form .wpcf7-submit {
 	color: var(--white-color);
 	background-color: var(--primary-color);
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-custom);
 }
 
 .rating .fa-star {
@@ -191,5 +191,5 @@ footer .footer-wrapper .nav-link-text {
 }
 
 .elementor .elementor-element .elementor-button {
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-custom)!important;
 }
