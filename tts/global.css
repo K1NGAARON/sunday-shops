@@ -6,7 +6,7 @@
 	--gold-color: #FAA61A;
 	--green-color: #4CAF50;
 	--header-color: #45283B;
-	--border-radius: 5px;
+	--border-radius: 10px;
 	--transition: all .25s ease-in-out;
 }
 
@@ -100,7 +100,7 @@ img.payment-method {
 .inline-form form input[type="submit"] {
 	color: var(--white-color);
 	background-color: var(--primary-color);
-	border-radius: 5px;
+	border-radius: 10px;
 }
 
 .wd-posts {
@@ -119,13 +119,13 @@ img.payment-method {
 
 .product-wrapper .product-element .wd-fill {
 	background-color: var(--purple-color);
-	border-radius: 15px;
+	border-radius: 10px;
 }
 
 .wd-carousel-wrap .wd-product .product-wrapper .product-element .wd-fill .wd-add-btn .add_to_cart_button {
 	background-color: var(--primary-color)!important;
 	border-color: var(--primary-color)!important;
-	border-radius: 15px;
+	border-radius: 10px;
 }
 
 .contact-form-wrapper ._form-content {
@@ -143,7 +143,7 @@ img.payment-method {
 .contact-form-wrapper ._form-content ._submit {
 	color: var(--white-color);
 	background-color: var(--primary-color);
-	border-radius: 15px;
+	border-radius: 10px;
 }
 
 .contact-form-wrapper ._form-content ._form_element {
@@ -170,7 +170,7 @@ img.payment-method {
 }
 
 header .searchform input[type="text"] {
-	border-radius: 11px;
+	border-radius: 10px;
 	border: 1px solid var(--black-color);
 	opacity: 0.6;
 	transition: var(--transition);
@@ -184,4 +184,12 @@ header .searchform input[type="text"]:focus {
 
 footer .footer-wrapper p {
 	font-size: 14px;
+}
+
+footer .footer-wrapper .nav-link-text {
+	font-weight: 400;
+}
+
+.elementor .elementor-element .elementor-button {
+	border-radius: var(--border-radius);
 }
