@@ -193,3 +193,13 @@ footer .footer-wrapper .nav-link-text {
 .elementor .elementor-element .elementor-button {
 	border-radius: var(--border-radius-custom)!important;
 }
+
+form.cart:where(.single_add_to_cart_button,
+.wd-buy-now-btn,
+.quantity) {
+	flex: 1 0;
+}
+
+form.cart .quantity {
+	justify-content: flex-end;
+}
