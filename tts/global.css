@@ -146,6 +146,10 @@ img.payment-method {
 	border-radius: 15px;
 }
 
+.contact-form-wrapper ._form-content ._form_element {
+	width: 100%;
+}
+
 .main-page-wrapper .site-content {
 	margin-bottom: 0;
 }
@@ -176,4 +180,8 @@ header .searchform input[type="text"]:focus {
 	border: 1px solid var(--primary-color);
 	opacity: 1;
 	transition: var(--transition);
+}
+
+footer .footer-wrapper p {
+	font-size: 14px;
 }
