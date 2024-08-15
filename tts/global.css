@@ -214,3 +214,7 @@ form.cart .quantity {
 .woocommerce-order-details.woocommerce-info.mollie-instructions {
 	background-color: var(--green-color);
 }
+
+.wd-shop-product {
+	padding-bottom: 30px;
+}
