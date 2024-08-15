@@ -118,7 +118,6 @@ function sizeChartText(e) {
         }
     };
 
-
     const title = document.querySelector('.description_tab a');
 
     if (title) {
