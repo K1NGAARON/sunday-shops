@@ -30,7 +30,9 @@ header .wd-nav[class*=wd-style-] > li > .woodmart-nav-link {
 }
 
 .elementor-element .atc-price .price .amount,
-.elementor-element .atc-price .price p {
+.elementor-element .atc-price .price p,
+.woocommerce-variation-price .price .amount,
+.woocommerce-variation-price .price p {
 	font-size: 24px;
 }
 
@@ -106,6 +108,7 @@ img.payment-method {
 .wd-posts {
 	width: 80%;
 	margin: 0 auto;
+	padding: 30px;
 }
 
 .single-post .main-page-wrapper {
@@ -202,4 +205,12 @@ form.cart:where(.single_add_to_cart_button,
 
 form.cart .quantity {
 	justify-content: flex-end;
+}
+
+.product-type-variable .atc-price {
+	display: none;
+}
+
+.woocommerce-order-details.woocommerce-info.mollie-instructions {
+	background-color: var(--green-color);
 }
