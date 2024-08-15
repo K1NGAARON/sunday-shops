@@ -881,3 +881,10 @@ li::marker {
 .products.columns-4 .product {
     width: calc((100% - 90px) / 3 - 0.01px);
 }
+
+.woocommerce-tabs .wc-tabs .description_tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

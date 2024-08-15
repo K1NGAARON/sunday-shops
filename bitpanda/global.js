@@ -133,7 +133,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    const variationsElement = document.querySelector('.woocommerce-product-details__short-description');
+    const variationsElement = document.querySelector('.woocommerce-tabs .wc-tabs .description_tab');
 
     if (variationsElement) {
         const currentURL = window.location.href;
