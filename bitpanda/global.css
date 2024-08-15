@@ -877,3 +877,7 @@ li::marker {
 .woocommerce-tabs .tabs.wc-tabs a {
     color: var(--black);
 }
+
+.products.columns-4 .product {
+    width: calc((100% - 90px) / 3 - 0.01px);
+}

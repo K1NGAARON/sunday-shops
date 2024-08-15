@@ -204,33 +204,42 @@ $(document).ready(function() {
 
 function animateTrees(obj, initVal, lastVal, duration) {
     let startTime = null;
-    let currentTime = Date.now();
-    
-    const step = (currentTime ) => {
-    
+
+    const step = (currentTime) => {
         if (!startTime) {
-            startTime = currentTime ;
+            startTime = currentTime;
         }
-    
-        const progress = Math.min((currentTime  - startTime) / duration, 1);
-    
+
+        const progress = Math.min((currentTime - startTime) / duration, 1);
+
         obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal);
-    
+
         if (progress < 1) {
             window.requestAnimationFrame(step);
-        }
-        else {
+        } else {
             window.cancelAnimationFrame(window.requestAnimationFrame(step));
         }
     };
-    
-        window.requestAnimationFrame(step);
-    }
-    
-    let numberToAnimate = document.querySelector('.number-to-animate');
-    
-    function load() {
-        animateTrees(numberToAnimate, 0, 12, 3000);
-    };
 
-document.addEventListener('DOMContentLoaded', load());
+    window.requestAnimationFrame(step);
+}
+
+let numberToAnimate = document.querySelector('.number-to-animate');
+
+function load() {
+    animateTrees(numberToAnimate, 0, 12, 3000);
+}
+
+let observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            load();
+            observer.unobserve(entry.target);  // Unobserve the element after animation starts
+        }
+    });
+}, {
+    threshold: 0.5  // Trigger when 50% of the element is in view
+});
+
+let startScrollDiv = document.querySelector('.startScroll');
+observer.observe(startScrollDiv);
