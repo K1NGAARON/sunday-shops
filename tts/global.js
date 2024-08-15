@@ -1,8 +1,8 @@
 function shortenText() {
     const description = $('.product .read-more-content .elementor-widget-container');
-    console.log(description);
+    console.log('Description: ', description);
     
-    if (!description) {
+    if (description === null || description === undefined || description.length == 0) {
         return;
     } else {
         const charactersToShow = 120;
