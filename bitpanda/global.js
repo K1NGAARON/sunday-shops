@@ -230,7 +230,7 @@ function animateTrees(obj, initVal, lastVal, duration) {
     let numberToAnimate = document.querySelector('.number-to-animate');
     
     function load() {
-        animateTrees(numberToAnimate, 0, 2572, 3000);
+        animateTrees(numberToAnimate, 0, 12, 3000);
     };
 
 document.addEventListener('DOMContentLoaded', load());

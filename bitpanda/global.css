@@ -842,7 +842,8 @@ li::marker {
     color: var(--black);
     font-weight: 700;
     text-align: center;
-    margin-bottom: 0;
+    margin: 0 auto;
+    width: 60%;
 }
 
 .animated-item {
@@ -862,4 +863,17 @@ li::marker {
     color: var(--primary);
     font-size: 60px;
     font-weight: 700;
+}
+
+.woocommerce-ordering,
+.woocommerce-result-count {
+	display: none;
+}
+
+.variations label {
+    text-transform: none;
+}
+
+.woocommerce-tabs .tabs.wc-tabs a {
+    color: var(--black);
 }
