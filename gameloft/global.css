@@ -63,8 +63,7 @@ table .product-subtotal {
 .single_variation,
 .reset_variations,
 .sku_wrapper,
-.woostify-single-product-stock.stock,
-.site-footer {
+.woostify-single-product-stock.stock {
     display: none!important;
 }
                                                 
@@ -686,4 +685,9 @@ header .btn a span {
     color: var(--white);
     background-color: var(--primary);
     padding: 10px;
+}
+
+.site-footer {
+	color: var(--white);
+	background-color: var(--black);
 }
