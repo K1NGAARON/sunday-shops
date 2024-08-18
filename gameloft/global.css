@@ -630,6 +630,26 @@ p {
     gap: 10px;
 }
 
+.form-wrapper .form-row.row-direction {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.form-wrapper .form-row.row-direction label {
+    color: var(--white);
+}
+
+.form-wrapper .form-row.row-direction a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.form-wrapper .form-row.row-direction .checkbox {
+    flex: 0 1;
+    height: unset;
+}
+
 .form-wrapper input {
     color: var(--black);
     flex: 1;
