@@ -49,7 +49,6 @@ option {
 	font-weight: 700;
 	color: var(--black);
 	background-color: var(--white);
-	padding: 10px;
 }
 
 .topbar * {
@@ -111,7 +110,7 @@ li::marker {
 /* HEADER */
 #masthead {
     background-color: var(--black);
-    padding: 10px 0;
+    padding: 0;
 }
 
 #masthead .site-header-inner {
@@ -170,7 +169,10 @@ li::marker {
 .product-loop-meta.no-transform .button, 
 .product-loop-meta.no-transform .added_to_cart, 
 [class*="elementor-kit"] .checkout-button,
-.woocommerce-cart-form__contents:not(.elementor-menu-cart__products) .actions .coupon [name="apply_coupon"] {
+.woocommerce-cart-form__contents:not(.elementor-menu-cart__products) .actions .coupon [name="apply_coupon"],
+.single_add_to_cart_button.button {
+    font-family: var(--fontFamily);
+    text-transform: capitalize;
     background-color: var(--primary);
     color: var(--black);
     font-weight: 700;   
@@ -498,6 +500,10 @@ li::marker {
 
 .modal .form {
     margin-top: 40px;
+}
+
+#openSizer {
+    margin: 0 auto;
 }
 
 #openSizer,

@@ -145,7 +145,8 @@ $(document).ready(function() {
                     <a id="openSizer">Calculate Size</a>
                 </div>
             `;
-            variationsElement.insertAdjacentHTML('beforeend', anchorElement);
+            
+            $('.row .col:first-child').append(anchorElement);
         }
     }
 
@@ -233,11 +234,11 @@ let observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             load();
-            observer.unobserve(entry.target);  // Unobserve the element after animation starts
+            observer.unobserve(entry.target); 
         }
     });
 }, {
-    threshold: 0.5  // Trigger when 50% of the element is in view
+    threshold: 0.5
 });
 
 let startScrollDiv = document.querySelector('.startScroll');
