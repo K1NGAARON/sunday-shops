@@ -810,8 +810,13 @@ li::marker {
 }
 
 .woostify-single-product-stock .woostify-single-product-stock-label {
+    display: none;
+}
+
+.main_status_div_product_page p {
     color: var(--black);
     font-weight: 700;
+    font-size: 14px;
     margin-top: 20px;
 }
 
@@ -826,12 +831,13 @@ li::marker {
     width: fit-content;
     padding: 8px 32px;
     margin: 0 auto 40px auto;
-    border: 1px solid var(--primary);
+    border: none;
+    background-color: var(--black);
     border-radius: var(--border-radius);
 }
 
 .checkout-notification p {
-    color: var(--black);
+    color: var(--white);
     font-weight: 700;
     margin-bottom: 0;
 }
@@ -893,4 +899,8 @@ li::marker {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.products.columns-4 .product:nth-of-type(4n + 5) {
+    clear: unset;
 }

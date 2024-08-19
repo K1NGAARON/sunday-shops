@@ -227,19 +227,26 @@ function animateTrees(obj, initVal, lastVal, duration) {
 let numberToAnimate = document.querySelector('.number-to-animate');
 
 function load() {
-    animateTrees(numberToAnimate, 0, 12, 3000);
+    if (numberToAnimate == null) {
+        return;
+    } else {
+        animateTrees(numberToAnimate, 0, 12, 3000);
+    }
 }
 
-let observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            load();
-            observer.unobserve(entry.target); 
-        }
-    });
-}, {
-    threshold: 0.5
-});
-
 let startScrollDiv = document.querySelector('.startScroll');
-observer.observe(startScrollDiv);
+
+if (startScrollDiv !== null) {  // Check if .startScroll exists on the page
+    let observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                load();
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    observer.observe(startScrollDiv);
+}
