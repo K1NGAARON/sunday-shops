@@ -809,6 +809,10 @@ li::marker {
     }
 }
 
+.product-loop-wrapper .main_status_div {
+    display: none;
+}
+
 .woostify-single-product-stock .woostify-single-product-stock-label {
     display: none;
 }
