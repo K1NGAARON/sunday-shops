@@ -218,3 +218,21 @@ form.cart .quantity {
 .wd-shop-product {
 	padding-bottom: 30px;
 }
+
+@media (max-width: 560px) {
+	.product-wrapper .product-element .wd-fill {
+		background-color: unset;
+		border-radius: 0;
+	}
+
+	.wd-posts {
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+	}
+	
+	.single-post .main-page-wrapper {
+		width: 100%;
+		margin: 0 auto;
+	}
+}
