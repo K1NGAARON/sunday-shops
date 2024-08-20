@@ -241,4 +241,16 @@ form.cart .quantity {
 		margin: 0 auto;
 		padding: 30px;
 	}
+
+	.quick-shop-form .woocommerce-Price-amount.amount {
+		font-size: 14px;
+	}
+
+	.quick-shop-form .stock {
+		font-size: 12px;
+	}
+
+	.quick-shop-form .variations .label.cell {
+		display: none;
+	}
 }
