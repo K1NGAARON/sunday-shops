@@ -228,11 +228,17 @@ form.cart .quantity {
 	.wd-posts {
 		width: 100%;
 		margin: 0 auto;
-		padding: 0;
+		padding: 30px;
 	}
 	
+	.home-blogs-wrapper .wd-posts,
+	.home-blogs-wrapper .main-page-wrapper {
+		padding: 0;
+	}
+
 	.single-post .main-page-wrapper {
 		width: 100%;
 		margin: 0 auto;
+		padding: 30px;
 	}
 }
