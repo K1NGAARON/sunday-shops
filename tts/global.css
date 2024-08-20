@@ -253,4 +253,12 @@ form.cart .quantity {
 	.quick-shop-form .variations .label.cell {
 		display: none;
 	}
+
+	.footer-body-text p,
+	.footer-body-text span {
+		font-size: 14px;
+		opacity: 1;
+		line-height: unset;
+	}
+
 }
