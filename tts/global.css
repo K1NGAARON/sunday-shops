@@ -6,6 +6,7 @@
 	--gold-color: #FAA61A;
 	--green-color: #4CAF50;
 	--header-color: #45283B;
+	--wd-arrow-bg-hover: #D9BA5E;
 	--border-radius-custom: 10px;
 	--transition: all .25s ease-in-out;
 }
@@ -231,6 +232,19 @@ form.cart .quantity {
 
 .wd-tools-element > a {
 	color: var(--primary-color);
+}
+
+.wd-nav-pagin-wrap[class*="wd-style-shape"] li.wd-active span {
+	background-color: var(--primary-color);
+	border-color: var(--primary-color);
+}
+
+.wd-nav-pagin-wrap[class*="wd-style-shape"] li:not(.wd-active):hover span {
+	border-color: unset;
+}
+
+.wd-nav-arrows .wd-arrow-inner:hover {
+	background: var(--primary-color);
 }
 
 @media (max-width: 560px) {
