@@ -219,6 +219,16 @@ form.cart .quantity {
 	padding-bottom: 30px;
 }
 
+.woocommerce-breadcrumb a,
+.woocommerce-breadcrumb p,
+.woocommerce-breadcrumb span {
+	color: var(--primary-color);
+}
+
+.elementor-widget-wd_shop_archive_woocommerce_title h1 {
+	color: var(--primary-color);
+}
+
 @media (max-width: 560px) {
 	.product-wrapper .product-element .wd-fill {
 		background-color: unset;
