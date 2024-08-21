@@ -229,6 +229,10 @@ form.cart .quantity {
 	color: var(--primary-color);
 }
 
+.wd-tools-element > a {
+	color: var(--primary-color);
+}
+
 @media (max-width: 560px) {
 	.product-wrapper .product-element .wd-fill {
 		background-color: unset;
