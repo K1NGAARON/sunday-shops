@@ -247,6 +247,22 @@ form.cart .quantity {
 	background: var(--primary-color);
 }
 
+.wd-tools-element {
+	color: var(--primary-color);
+}
+
+.wd-tools-element > a {
+	color: var(--primary-color)!important;
+}
+
+.elementor-element h1,
+.elementor-element h2,
+.elementor-element h3,
+.elementor-element h4,
+.elementor-element .button {
+	text-transform: none!important;
+}
+
 @media (max-width: 560px) {
 	.product-wrapper .product-element .wd-fill {
 		background-color: unset;
