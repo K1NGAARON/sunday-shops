@@ -304,5 +304,11 @@ form.cart .quantity {
 		opacity: 1;
 		line-height: unset;
 	}
+}
 
+@media (max-width: 1024px) {
+    [class*="single-breadcrumbs"] :is(.woocommerce-breadcrumb,
+	.yoast-breadcrumb) .breadcrumb-link-last {
+		color: var(--primary-color);
+	}
 }
