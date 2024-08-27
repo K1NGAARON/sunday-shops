@@ -255,12 +255,41 @@ form.cart .quantity {
 	color: var(--primary-color)!important;
 }
 
+._form-thank-you {
+	color: var(--white-color)!important;
+}
+
 .elementor-element h1,
 .elementor-element h2,
 .elementor-element h3,
 .elementor-element h4,
 .elementor-element .button {
 	text-transform: none!important;
+}
+
+header .flexbox .item .fa-solid.fa-star:not(.elementor-star-empty):before,
+header .flexbox .item .fa-solid.fa-star-half:not(.elementor-star-empty):before {
+    content: "★";
+}
+
+header .flexbox .item .fa-solid.fa-star:before,
+header .flexbox .item .fa-solid.fa-star-half:before {
+    content: "\e934";
+    display: block;
+    font-size: inherit;
+    font-family: inherit;
+    overflow: hidden;
+    color: #f0ad4e;
+}
+
+header .flexbox .item .fa-solid.fa-star-half:before {
+    display: block;
+    font-size: inherit;
+    font-family: inherit;
+    background: linear-gradient(90deg, #f0ad4e 60%, transparent 40%);
+    -webkit-background-clip: text;
+    color: transparent;
+    overflow: hidden;
 }
 
 @media (max-width: 560px) {
