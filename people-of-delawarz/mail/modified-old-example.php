@@ -187,10 +187,20 @@ if ( ! defined( 'ABSPATH' ) ) {
                                                                   </h3>
                                                                   <p style="mso-line-height-rule:exactly; font-family:century-gothic, sans-serif; font-style:normal; font-size:14px; color:#3C3C3C">
                                                                   </p>
-                                                                  <div id="hs_cos_wrapper_module-9-0-0_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_rich_text" style="color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type="widget" data-hs-cos-type="inline_rich_text" data-hs-cos-field="text_block_item.richtext_field">
+                                                                  <div id="hs_cos_wrapper_module-9-0-0_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_rich_text" style="color: inherit; font-size: inherit; line-height: inherit; text-align:left;" data-hs-cos-general-type="widget" data-hs-cos-type="inline_rich_text" data-hs-cos-field="text_block_item.richtext_field">
                                                                      <p style="mso-line-height-rule:exactly; line-height:150%">Congrats, you successfully ordered your end-of-year present!</p>
                                                                      <p style="mso-line-height-rule:exactly; line-height:150%">&nbsp;</p>
-                                                                     <p style="mso-line-height-rule:exactly; line-height:150%">'Name of the gift'</p>
+                                                     
+                                                                     <?php
+                                                                     // Loop through the order items to display product names
+                                                                     foreach ( $order->get_items() as $item_id => $item ) {
+                                                                        $product_name = $item->get_name();
+                                                                        ?>
+                                                                        <p style="mso-line-height-rule:exactly; line-height:150%; font-family:century-gothic, sans-serif; font-size:14px; color:#3C3C3C;">Your gift: <?php echo esc_html( $product_name ); ?></p>
+                                                                        <?php
+                                                                     }
+                                                                     ?>
+
                                                                      <div data-hs-cos-general-type="widget" data-hs-cos-type="inline_rich_text" data-hs-cos-field="text_block_item.richtext_field" style="mso-line-height-rule:exactly; line-height:150%">
                                                                         <div data-hs-cos-general-type="widget" data-hs-cos-type="inline_rich_text" data-hs-cos-field="text_block_item.richtext_field" style="mso-line-height-rule:exactly; line-height:150%">
                                                                            <p style="mso-line-height-rule:exactly; line-height:150%">&nbsp;</p>
