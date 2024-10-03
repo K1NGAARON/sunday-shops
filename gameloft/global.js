@@ -35,9 +35,18 @@ function addPriceIcon(e) {
     };
 };
 
+function addTextToCheckout() {
+    if (window.location.href.indexOf("/checkout/order-received/") > -1) {
+        $('.woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received').text("Thank you for ordering on our pre-order shop!");
+       
+        let successNotice = $(".woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received");
+        successNotice.after("<p class='track-trace'><span class='bold'>Important: </span>This is a pre-order shop and all orders will be sent out in December.</p>");
+    }
+};
+
 $(document).ready(function() {
-	// addPriceIcon()
-})
+    addTextToCheckout()
+});
 
 const oneSizeProductsURL = [
     'https://orchid-owl-920623.hostingersite.com/product/cap/',
