@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Barcode Scannen en Foto Versturen</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+   <style>
+       video, canvas {
+           max-width: 100%;
+           height: auto;
+       }
+       #barcode-result {
+           font-size: 1.5em;
+           margin-top: 10px;
+       }
+   </style>
+</head>
+<body>
+   <h1>Scan een Barcode en Neem een Foto</h1>
+   
+   <div id="scanner-container">
+       <video id="video" autoplay></video>
+       <canvas id="canvas" style="display: none;"></canvas>
+       <p id="barcode-result">Barcode Resultaat: <span id="barcode"></span></p>
+   </div>
+ 
+   <div id="photo-section">
+       <h2>Maak een Foto</h2>
+       <button id="take-photo">Maak Foto</button>
+       <div>
+           <img id="photo" alt="Uw foto zal hier verschijnen" style="width: 100%;"/>
+       </div>
+   </div>
+ 
+   <div id="json-output">
+       <h2>Resultaat in JSON</h2>
+       <pre id="json-result"></pre>
+       <button id="send-json">Verstuur JSON</button>
+   </div>
