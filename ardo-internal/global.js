@@ -28,7 +28,7 @@ function addPriceIcon(e) {
             const spanElement = document.createElement('span');
             spanElement.className = 'woocommerce-Price-amount amount';
 
-            const textNode = document.createTextNode('Ardo coins');
+            const textNode = document.createTextNode('EUR per package.');
             spanElement.appendChild(textNode);
             priceTarget.appendChild(spanElement);
         });
@@ -36,116 +36,43 @@ function addPriceIcon(e) {
 };
 
 $(document).ready(function() {
-	addPriceIcon()
+	addPriceIcon();
 })
 
-const oneSizeProductsURL = [];
-
-function sizeChartText(e) {
-    function hideOneSizeTable() {
-        const table = document.querySelector('.variations');
-        $(table).hide();
-    };
+// Auto-fill address fields based on selected location
+document.addEventListener('DOMContentLoaded', function() {
+    const selectElement = document.getElementById('billing_ardo_site');
+    const countrySelectElement = document.getElementById('billing_country');
     
-    function checkAndHideOneSizeTable() {
-        const currentURL = window.location.href;
-      
-        if (oneSizeProductsURL.includes(currentURL)) {
-            hideOneSizeTable();
-            $('.sizer-holder').hide();
-            console.log('hide this item')
-        }
+    // Mapping campuses to their respective details
+    const campusDetails = {
+        '': {
+            address1: '',
+            address2: '',
+            city: '',
+            zip: '',
+            country: '',
+            phone: ''
+        },
     };
 
+    if (selectElement) {
+        selectElement.addEventListener('change', function() {
+            const selectedOption = this.value;
+            const campus = campusDetails[selectedOption];
 
-    const title = document.querySelector('.description_tab a');
-
-    if (title) {
-        title.innerHTML = 'Size Chart';
-    }
-
-    checkAndHideOneSizeTable();
-}
-
-$(document).ready(function() {
-    sizeChartText();
-});
-
-$(document).ready(function() {
-    const variationsElement = document.querySelector('.woocommerce-product-details__short-description');
-
-    if (variationsElement) {
-        const currentURL = window.location.href;
-
-        if (oneSizeProductsURL.includes(currentURL)) {
-            return;
-            /*
-                CHECK THIS THING
-            */
-            const anchorElement = `
-                <div class="sizer-holder">
-                    <a id="openSizer">Calculate Size</a>
-                </div>
-            `;
-            variationsElement.insertAdjacentHTML('beforeend', anchorElement);
-
-        } else {
-            const anchorElement = `
-                <div class="sizer-holder">
-                    <a id="openSizer">Calculate Size</a>
-                </div>
-            `;
-            variationsElement.insertAdjacentHTML('beforeend', anchorElement);
-        }
-    }
-
-    function waitForElementToExist(elementId, callback) {
-        const targetNode = document.documentElement;
-        const config = { childList: true, subtree: true };
-      
-        const observer = new MutationObserver(function(mutationsList, observer) {
-            for (let mutation of mutationsList) {
-                if (mutation.type === 'childList') {
-                    const element = document.getElementById(elementId);
-                    if (element) {
-                        observer.disconnect();
-                        callback(element);
-                    }
+            if (campus) {
+                document.getElementById('billing_address_1').value = campus.address1 || '';
+                document.getElementById('billing_address_2').value = campus.address2 || '';
+                document.getElementById('billing_city').value = campus.city || '';
+                document.getElementById('billing_postcode').value = campus.zip || '';
+                document.getElementById('billing_phone').value = campus.phone || '';
+                
+                if (countrySelectElement) {
+                    countrySelectElement.value = campus.country;
+                    countrySelectElement.dispatchEvent(new Event('change'));
                 }
             }
         });
-      
-        observer.observe(targetNode, config);
     }
-
-    waitForElementToExist('openSizer', function(e) {
-        const modal = document.querySelector('#myModal');
-        const openSizer = document.querySelector('#openSizer');
-
-        function showPopUp(e) {
-            modal.style.display = "block";
-        }
-    
-        function hidePopUp(e) {
-            modal.style.display = "none";
-        }
-    
-        let span = document.getElementById("closeModal");
-        
-        $(window).click((e) => {
-            if (e.target == modal) {
-                hidePopUp();
-            }
-        })
-
-        $(window).on('keyup', function(event) {
-            if (event.key == "Escape") {
-                hidePopUp();
-            }
-        });
-
-        // Modal functions 
-        openSizer.addEventListener('click', showPopUp);
-        span.addEventListener('click', hidePopUp);
-    })
 });

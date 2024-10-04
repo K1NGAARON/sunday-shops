@@ -49,23 +49,97 @@ function hideOneSizeTable() {
   $(table).hide();
 }
 
-function checkAndHideOneSizeTable() {
-  const oneSizeProductsURL = [
-    "https://iogoodieworld.shop.teamsunday.com/product/packaging/",
-    "https://iogoodieworld.shop.teamsunday.com/product/flyer/",
-    "https://iogoodieworld.shop.teamsunday.com/product/io-bottle-orange/",
-    "https://iogoodieworld.shop.teamsunday.com/product/io-bottle-white/",
-    "https://iogoodieworld.shop.teamsunday.com/product/io-socks/",
-    "https://iogoodieworld.shop.teamsunday.com/product/io-cap/",
-    "https://iogoodieworld.shop.teamsunday.com/product/io-totebag/",
-  ];
 
-  const currentURL = window.location.href;
 
   if (oneSizeProductsURL.includes(currentURL)) {
     hideOneSizeTable();
   }
 }
+
+$(document).ready(function () {
+  const variationsElement = document.querySelector(
+    ".woocommerce-product-details__short-description"
+  );
+
+  if (variationsElement) {
+    const oneSizeProductsURL = [
+      "https://iogoodieworld.shop.teamsunday.com/product/io-cap/",
+      "https://iogoodieworld.shop.teamsunday.com/product/io-socks/",
+      "https://iogoodieworld.shop.teamsunday.com/product/io-bottle-orange/",
+      "https://iogoodieworld.shop.teamsunday.com/product/io-bottle-white/",
+      "https://iogoodieworld.shop.teamsunday.com/product/io-sports-shirt/",
+      "https://iogoodieworld.shop.teamsunday.com/product/io-sports-shirt-purple/",
+      "https://iogoodieworld.shop.teamsunday.com/product/io-totebag/",
+      "https://iogoodieworld.shop.teamsunday.com/product/io-backpack/",
+      "https://iogoodieworld.shop.teamsunday.com/product/io-laptop-sleeve-blue/",
+      "https://iogoodieworld.shop.teamsunday.com/product/io-backpack/",
+    ];
+
+    const currentURL = window.location.href;
+
+    if (oneSizeProductsURL.includes(currentURL)) {
+      return;
+    } else {
+      const anchorElement = `
+                <div class="sizer-holder">
+                    <a id="openSizer">Calculate Size</a>
+                </div>
+            `;
+      variationsElement.insertAdjacentHTML("beforeend", anchorElement);
+    }
+  }
+
+  function waitForElementToExist(elementId, callback) {
+    const targetNode = document.documentElement;
+    const config = { childList: true, subtree: true };
+
+    const observer = new MutationObserver(function (mutationsList, observer) {
+      for (let mutation of mutationsList) {
+        if (mutation.type === "childList") {
+          const element = document.getElementById(elementId);
+          if (element) {
+            observer.disconnect();
+            callback(element);
+          }
+        }
+      }
+    });
+
+    observer.observe(targetNode, config);
+  }
+
+  waitForElementToExist("openSizer", function (e) {
+    const modal = document.querySelector("#myModal");
+    const openSizer = document.querySelector("#openSizer");
+
+    function showPopUp(e) {
+      modal.style.display = "block";
+    }
+
+    function hidePopUp(e) {
+      modal.style.display = "none";
+    }
+
+    let span = document.getElementById("closeModal");
+
+    $(window).click((e) => {
+      if (e.target == modal) {
+        hidePopUp();
+      }
+    });
+
+    $(window).on("keyup", function (event) {
+      if (event.key == "Escape") {
+        hidePopUp();
+      }
+    });
+
+    // Modal functions
+    openSizer.addEventListener("click", showPopUp);
+    span.addEventListener("click", hidePopUp);
+  });
+});
+
 
 function hideCartItems() {
   let cartItems = document.getElementsByClassName("cart_item");
@@ -153,83 +227,3 @@ $(document).ready(function () {
   }, 1000);
 });
 
-$(document).ready(function () {
-  const variationsElement = document.querySelector(
-    ".woocommerce-product-details__short-description"
-  );
-
-  if (variationsElement) {
-    const oneSizeProductsURL = [
-      "https://iogoodieworld.shop.teamsunday.com/product/io-cap/",
-      "https://iogoodieworld.shop.teamsunday.com/product/io-socks/",
-      "https://iogoodieworld.shop.teamsunday.com/product/io-bottle-orange/",
-      "https://iogoodieworld.shop.teamsunday.com/product/io-bottle-white/",
-      "https://iogoodieworld.shop.teamsunday.com/product/io-sports-shirt/",
-      "https://iogoodieworld.shop.teamsunday.com/product/io-sports-shirt-purple/",
-      "https://iogoodieworld.shop.teamsunday.com/product/io-totebag/",
-    ];
-
-    const currentURL = window.location.href;
-
-    if (oneSizeProductsURL.includes(currentURL)) {
-      return;
-    } else {
-      const anchorElement = `
-                <div class="sizer-holder">
-                    <a id="openSizer">Calculate Size</a>
-                </div>
-            `;
-      variationsElement.insertAdjacentHTML("beforeend", anchorElement);
-    }
-  }
-
-  function waitForElementToExist(elementId, callback) {
-    const targetNode = document.documentElement;
-    const config = { childList: true, subtree: true };
-
-    const observer = new MutationObserver(function (mutationsList, observer) {
-      for (let mutation of mutationsList) {
-        if (mutation.type === "childList") {
-          const element = document.getElementById(elementId);
-          if (element) {
-            observer.disconnect();
-            callback(element);
-          }
-        }
-      }
-    });
-
-    observer.observe(targetNode, config);
-  }
-
-  waitForElementToExist("openSizer", function (e) {
-    const modal = document.querySelector("#myModal");
-    const openSizer = document.querySelector("#openSizer");
-
-    function showPopUp(e) {
-      modal.style.display = "block";
-    }
-
-    function hidePopUp(e) {
-      modal.style.display = "none";
-    }
-
-    let span = document.getElementById("closeModal");
-
-    $(window).click((e) => {
-      if (e.target == modal) {
-        hidePopUp();
-      }
-    });
-
-    $(window).on("keyup", function (event) {
-      if (event.key == "Escape") {
-        hidePopUp();
-      }
-    });
-
-    // Modal functions
-    openSizer.addEventListener("click", showPopUp);
-    span.addEventListener("click", hidePopUp);
-  });
-});
