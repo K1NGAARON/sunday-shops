@@ -17,24 +17,6 @@ $('.accordion-item').click(function () {
     $(this).children('.accordion-head').children('.icon').children('i').addClass('fa-minus');
 });
 
-
-function addPriceIcon(e) {
-    const priceTargets = document.querySelectorAll('.price');
-
-    if (!priceTargets) {
-        return;
-    } else {
-        priceTargets.forEach(priceTarget => {
-            const spanElement = document.createElement('span');
-            spanElement.className = 'woocommerce-Price-amount amount';
-
-            const textNode = document.createTextNode('PGS-coins');
-            spanElement.appendChild(textNode);
-            priceTarget.appendChild(spanElement);
-        });
-    };
-};
-
 function addTextToCheckout() {
     if (window.location.href.indexOf("/checkout/order-received/") > -1) {
         $('.woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received').text("Thank you for ordering on our pre-order shop!");
@@ -44,13 +26,9 @@ function addTextToCheckout() {
     }
 };
 
-$(document).ready(function() {
-    addTextToCheckout()
-});
-
 const oneSizeProductsURL = [
-    'https://orchid-owl-920623.hostingersite.com/product/cap/',
-    'https://orchid-owl-920623.hostingersite.com/product/the-streetwear-cap/'
+    'https://asphalt-shop.gameloft.com/product/cap/',
+    'https://asphalt-shop.gameloft.com/product/the-streetwear-cap/',
 ];
 
 function sizeChartText(e) {
@@ -67,7 +45,6 @@ function sizeChartText(e) {
         if (oneSizeProductsURL.includes(currentURL)) {
             hideOneSizeTable();
             $('.sizer-holder').hide();
-            console.log('hide this item')
         }
     };
 
@@ -83,6 +60,7 @@ function sizeChartText(e) {
 
 $(document).ready(function() {
     sizeChartText();
+    addTextToCheckout();
 });
 
 $(document).ready(function() {
